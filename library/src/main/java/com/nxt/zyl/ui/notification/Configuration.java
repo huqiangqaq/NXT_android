@@ -15,6 +15,10 @@ package com.nxt.zyl.ui.notification;
  * limitations under the License.
  */
 
+import android.app.Fragment;
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
+import android.content.Context;
 import android.view.Gravity;
 
 public class Configuration {

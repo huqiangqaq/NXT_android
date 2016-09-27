@@ -94,4 +94,5 @@ public class ZToastUtils {
             toast.cancel();
         }
     }
+
 }

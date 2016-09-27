@@ -27,6 +27,7 @@ import com.nxt.moderagricultrue.adapter.BuyPageAdapter;
 import com.nxt.moderagricultrue.domain.BuyPage;
 import com.nxt.moderagricultrue.findbyid.BuyPageDetailActivity;
 import com.nxt.zyl.data.ZDataTask;
+import com.nxt.zyl.util.ZToastUtils;
 
 import org.json.JSONObject;
 
@@ -240,7 +241,7 @@ public class SwipeListActivity extends BaseActivity implements AdapterView.OnIte
                         buyPageList.addAll(addList);
                         mBuyPageAdapter.notifyDataSetChanged();
                     }else{
-                        Toast.makeText(this, "数据已加载完毕", Toast.LENGTH_SHORT).show();
+                        ZToastUtils.showShort(SwipeListActivity.this,"数据已加载完毕");
                     }
                 } catch (Exception e) {
                     e.printStackTrace();
@@ -264,5 +265,11 @@ public class SwipeListActivity extends BaseActivity implements AdapterView.OnIte
         BuyPage mBuypage=buyPageList.get(i);
         Log.e(TAG,i+"");
         startActivity(new Intent(this, BuyPageDetailActivity.class).putExtra(Constants.VCRECNO,mBuypage));
+    }
+
+    @Override
+    public void onBackPressed() {
+        ZToastUtils.hideToast();
+        super.onBackPressed();
     }
 }

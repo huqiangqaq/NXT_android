@@ -160,6 +160,10 @@
         "source": "D:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\layout\\abc_list_menu_item_layout.xml"
     },
     {
+        "merged": "D:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_test.xml",
+        "source": "D:\\Android\\Android Projects\\NXT_android\\app\\src\\main\\res\\layout\\activity_test.xml"
+    },
+    {
         "merged": "D:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_menu_layout.xml",
         "source": "D:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\layout\\abc_action_menu_layout.xml"
     },
@@ -208,12 +212,12 @@
         "source": "D:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\layout\\abc_action_bar_title_item.xml"
     },
     {
-        "merged": "D:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_select_dialog_material.xml",
-        "source": "D:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\layout\\abc_select_dialog_material.xml"
-    },
-    {
         "merged": "D:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_lines.xml",
         "source": "D:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\layout\\notification_template_lines.xml"
+    },
+    {
+        "merged": "D:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_select_dialog_material.xml",
+        "source": "D:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\layout\\abc_select_dialog_material.xml"
     },
     {
         "merged": "D:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_dialog_title_material.xml",
@@ -300,12 +304,12 @@
         "source": "D:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\layout\\abc_popup_menu_header_item_layout.xml"
     },
     {
-        "merged": "D:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_parcel.xml",
-        "source": "D:\\Android\\Android Projects\\NXT_android\\app\\src\\main\\res\\layout\\item_parcel.xml"
-    },
-    {
         "merged": "D:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_big_media.xml",
         "source": "D:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\layout\\notification_template_big_media.xml"
+    },
+    {
+        "merged": "D:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_parcel.xml",
+        "source": "D:\\Android\\Android Projects\\NXT_android\\app\\src\\main\\res\\layout\\item_parcel.xml"
     },
     {
         "merged": "D:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\layout_snackbar_include.xml",

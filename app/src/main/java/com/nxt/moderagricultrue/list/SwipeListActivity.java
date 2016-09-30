@@ -189,6 +189,7 @@ public class SwipeListActivity extends BaseActivity implements AdapterView.OnIte
             Toast.makeText(this, "网络不可用", Toast.LENGTH_SHORT).show();
             return;
         }else {
+            String s = String.format(Constants.URL_01,page);
             zDataTask.get(String.format(Constants.URL_01,page),null,null,this);
         }
     }

@@ -3338,12 +3338,14 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int library_roundedimageview_licenseId=0x7f06002e;
         public static final int library_roundedimageview_repositoryLink=0x7f06002f;
         public static final int login_login=0x7f060030;
-        public static final int resource_buy=0x7f060031;
-        public static final int resource_buy_info=0x7f060032;
-        public static final int resource_send=0x7f060033;
-        public static final int resource_send_info=0x7f060034;
+        public static final int news_comment=0x7f060031;
+        public static final int resource_buy=0x7f060032;
+        public static final int resource_buy_info=0x7f060033;
+        public static final int resource_send=0x7f060034;
+        public static final int resource_send_info=0x7f060035;
         public static final int status_bar_notification_info_overflow=0x7f060013;
-        public static final int title_activity_base_title=0x7f060035;
+        public static final int title_activity_base_title=0x7f060036;
+        public static final int user_info=0x7f060037;
     }
     public static final class style {
         public static final int AlertDialog_AppCompat=0x7f08008b;

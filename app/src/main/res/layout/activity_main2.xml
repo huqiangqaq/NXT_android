@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -15,64 +16,80 @@
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="240dp">
+                android:layout_height="245dp">
+
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="250dp"
-                    android:background="@mipmap/banner_02"/>
+                    android:background="@mipmap/banner_02" />
+
                 <ImageView
                     android:layout_width="120dp"
                     android:layout_height="120dp"
                     android:layout_alignParentBottom="true"
                     android:layout_centerHorizontal="true"
-                    android:background="@mipmap/banner_03"/>
+                    android:background="@mipmap/banner_03" />
+
                 <RelativeLayout
                     android:layout_width="150dp"
                     android:layout_height="50dp"
                     android:layout_alignParentLeft="true"
-                    android:layout_alignParentBottom="true">
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentStart="true">
+
                     <TextView
-                        android:layout_centerInParent="true"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textSize="18sp"
-                        android:text="新闻公告"/>
+                        android:layout_centerInParent="true"
+                        android:text="@string/news_comment"
+                        android:textSize="18sp" />
 
                 </RelativeLayout>
+
                 <RelativeLayout
                     android:layout_width="150dp"
                     android:layout_height="50dp"
-                    android:layout_alignParentRight="true"
                     android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
                     android:gravity="center">
+
                     <TextView
-                        android:layout_centerInParent="true"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textSize="18sp"
-                        android:text="人员信息"/>
+                        android:layout_centerInParent="true"
+                        android:text="@string/user_info"
+                        android:textSize="18sp" />
 
                 </RelativeLayout>
             </RelativeLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="10dp"
-                android:orientation="vertical"
-                android:background="@drawable/background_with_shadow"></LinearLayout>
+                android:layout_height="5dp"
+                android:background="@drawable/background_with_shadow"
+                android:orientation="vertical">
+            </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:background="@mipmap/banner_01">
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="10dp"
-                android:orientation="vertical"
-                android:background="@drawable/background_with_shadow"></LinearLayout>
+                android:layout_height="5dp"
+                android:background="@drawable/background_with_shadow"
+                android:orientation="vertical">
+            </LinearLayout>
+
+
+            //fragment容器
             <RelativeLayout
+                android:id="@+id/rl_content"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:id="@+id/rl_content">
+                android:layout_height="match_parent">
             </RelativeLayout>
 
         </LinearLayout>

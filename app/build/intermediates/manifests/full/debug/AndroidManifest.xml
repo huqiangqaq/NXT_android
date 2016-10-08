@@ -120,6 +120,9 @@
         <activity
             android:name="com.nxt.moderagricultrue.findbyid.UserDetailActivity"
             android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.nxt.moderagricultrue.Main2Activity"
+            android:theme="@style/AppTheme" />
     </application>
 
 </manifest>

@@ -4,51 +4,58 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="220dp">
+
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="250dp"
-            android:background="@mipmap/banner_02"/>
+            android:background="@mipmap/banner_02" />
+
         <ImageView
             android:layout_width="120dp"
             android:layout_height="120dp"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
-            android:background="@mipmap/banner_03"/>
-        <RelativeLayout
-            android:layout_width="150dp"
-            android:layout_height="50dp"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentBottom="true">
-            <TextView
-                android:layout_centerInParent="true"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="18sp"
-                android:text="新闻公告"/>
+            android:background="@mipmap/banner_03" />
 
-        </RelativeLayout>
         <RelativeLayout
             android:layout_width="150dp"
             android:layout_height="50dp"
-            android:layout_alignParentRight="true"
             android:layout_alignParentBottom="true"
-            android:gravity="center">
+            android:layout_alignParentLeft="true">
+
             <TextView
-                android:layout_centerInParent="true"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="18sp"
-                android:text="人员信息"/>
+                android:layout_centerInParent="true"
+                android:text="新闻公告"
+                android:textSize="18sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="人员信息"
+                android:textSize="18sp" />
 
         </RelativeLayout>
     </RelativeLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="20dp"
-        android:orientation="vertical"
-        android:background="@color/btn_white_pressed">
+        android:background="@color/btn_white_pressed"
+        android:orientation="vertical">
     </LinearLayout>
 </LinearLayout>

@@ -75,7 +75,8 @@ public class LoginActivity extends BaseActivity {
         dismissLoadingDialog();
         Log.e(TAG,string);
         if(string.contains("1")){
-            startActivity(new Intent(this,MainActivity.class));
+            startActivity(new Intent(this,Main2Activity.class));
+            this.finish();
         }else {
             Toast.makeText(this, "账号或密码错误", Toast.LENGTH_SHORT).show();
         }

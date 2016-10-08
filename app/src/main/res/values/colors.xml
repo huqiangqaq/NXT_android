@@ -7,4 +7,5 @@
     <color name="common_bg_white">#efefef</color>
     <color name="btn_white_pressed">#b5b5b5</color>
     <color name="common_bg">#F0F0F0</color>
+    <color name="gray">#808080</color><!--灰色 -->
 </resources>

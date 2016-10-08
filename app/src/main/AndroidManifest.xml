@@ -114,6 +114,8 @@
         <activity
             android:name=".findbyid.UserDetailActivity"
             android:theme="@style/AppTheme" />
+        <activity android:name=".Main2Activity"
+            android:theme="@style/AppTheme"></activity>
     </application>
 
 </manifest>

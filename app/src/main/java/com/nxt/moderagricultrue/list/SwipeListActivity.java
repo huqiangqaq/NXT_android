@@ -3,6 +3,7 @@ package com.nxt.moderagricultrue.list;
 import android.content.Intent;
 import android.os.Handler;
 import android.os.Message;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.text.TextUtils;
 import android.util.Log;
@@ -49,6 +50,7 @@ public class SwipeListActivity extends BaseActivity implements AdapterView.OnIte
     private LinearLayout lineShaiXuan;
     private EditText et_01,et_02,et_03,et_04,et_05;
     private TextView tv_reset,tv_confirm;
+    private FloatingActionButton fab;
 
     private BuyPageAdapter mBuyPageAdapter;
     private List<BuyPage> buyPageList=new ArrayList<>();
@@ -105,6 +107,10 @@ public class SwipeListActivity extends BaseActivity implements AdapterView.OnIte
 
         tv_reset.setOnClickListener(this);
         tv_confirm.setOnClickListener(this);
+
+        //floatactionbutton
+        fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab.setOnClickListener(this);
     }
 
     @Override
@@ -122,6 +128,7 @@ public class SwipeListActivity extends BaseActivity implements AdapterView.OnIte
                 String s="1&vcmadecomp="+prc;
                 Log.e(TAG,s);
                 if(prc !=null){
+                    String ss = String.format(Constants.URL_01,s);
                     zDataTask.get(String.format(Constants.URL_01,s),null,null,this);
                     Log.e(TAG,String.format(Constants.URL_01,s));
                 }
@@ -142,6 +149,9 @@ public class SwipeListActivity extends BaseActivity implements AdapterView.OnIte
                     Log.e(TAG,String.format(Constants.URL_01,in));
                 }
                 lineShaiXuan.setVisibility(View.GONE);
+                break;
+            case R.id.fab:
+                ZToastUtils.showShort(this,"点击这里新增");
                 break;
         }
     }

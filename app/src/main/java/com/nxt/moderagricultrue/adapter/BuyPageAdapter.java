@@ -13,6 +13,7 @@ import com.nxt.moderagricultrue.domain.BuyPage;
 import com.nxt.zyl.ui.adapter.ZBaseAdapter;
 import com.nxt.zyl.util.ZToastUtils;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -23,6 +24,7 @@ import java.util.Map;
 public class BuyPageAdapter extends ZBaseAdapter<BuyPage> implements View.OnClickListener {
     private boolean isShow = false;
     private Context mContext;
+    private Map<Integer,Boolean> map = new HashMap<>();
 
     public BuyPageAdapter(Context context, List<BuyPage> dataList) {
         super(context, dataList);

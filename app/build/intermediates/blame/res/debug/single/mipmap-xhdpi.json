@@ -28,12 +28,12 @@
         "source": "D:\\Android\\Android Projects\\NXT_android\\app\\src\\main\\res\\mipmap-xhdpi\\bg_07.png"
     },
     {
-        "merged": "D:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi\\bg_10.png",
-        "source": "D:\\Android\\Android Projects\\NXT_android\\app\\src\\main\\res\\mipmap-xhdpi\\bg_10.png"
-    },
-    {
         "merged": "D:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi\\icon_16.png",
         "source": "D:\\Android\\Android Projects\\NXT_android\\app\\src\\main\\res\\mipmap-xhdpi\\icon_16.png"
+    },
+    {
+        "merged": "D:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi\\bg_10.png",
+        "source": "D:\\Android\\Android Projects\\NXT_android\\app\\src\\main\\res\\mipmap-xhdpi\\bg_10.png"
     },
     {
         "merged": "D:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi\\icon_back.png",
@@ -84,6 +84,10 @@
         "source": "D:\\Android\\Android Projects\\NXT_android\\app\\src\\main\\res\\mipmap-xhdpi\\bg_02.png"
     },
     {
+        "merged": "D:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi\\icon_13.png",
+        "source": "D:\\Android\\Android Projects\\NXT_android\\app\\src\\main\\res\\mipmap-xhdpi\\icon_13.png"
+    },
+    {
         "merged": "D:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi\\banner_02.png",
         "source": "D:\\Android\\Android Projects\\NXT_android\\app\\src\\main\\res\\mipmap-xhdpi\\banner_02.png"
     },
@@ -106,6 +110,10 @@
     {
         "merged": "D:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi\\icon_06.png",
         "source": "D:\\Android\\Android Projects\\NXT_android\\app\\src\\main\\res\\mipmap-xhdpi\\icon_06.png"
+    },
+    {
+        "merged": "D:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi\\icon_14.png",
+        "source": "D:\\Android\\Android Projects\\NXT_android\\app\\src\\main\\res\\mipmap-xhdpi\\icon_14.png"
     },
     {
         "merged": "D:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi\\icon_09.png",

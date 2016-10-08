@@ -72,12 +72,12 @@
         "source": "D:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\drawable\\abc_ic_search_api_material.xml"
     },
     {
-        "merged": "D:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\background_with_shadow.xml",
-        "source": "D:\\Android\\Android Projects\\NXT_android\\app\\src\\main\\res\\drawable\\background_with_shadow.xml"
-    },
-    {
         "merged": "D:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\background_selector.xml",
         "source": "D:\\Android\\Android Projects\\NXT_android\\app\\src\\main\\res\\drawable\\background_selector.xml"
+    },
+    {
+        "merged": "D:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\background_with_shadow.xml",
+        "source": "D:\\Android\\Android Projects\\NXT_android\\app\\src\\main\\res\\drawable\\background_with_shadow.xml"
     },
     {
         "merged": "D:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_borderless_material.xml",

@@ -100,12 +100,12 @@
         "source": "D:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\layout\\select_dialog_item_material.xml"
     },
     {
-        "merged": "D:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_seedbatch.xml",
-        "source": "D:\\Android\\Android Projects\\NXT_android\\app\\src\\main\\res\\layout\\item_seedbatch.xml"
-    },
-    {
         "merged": "D:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_toolbar.xml",
         "source": "D:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\layout\\abc_screen_toolbar.xml"
+    },
+    {
+        "merged": "D:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_seedbatch.xml",
+        "source": "D:\\Android\\Android Projects\\NXT_android\\app\\src\\main\\res\\layout\\item_seedbatch.xml"
     },
     {
         "merged": "D:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\commen_detail.xml",
@@ -116,12 +116,12 @@
         "source": "D:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\layout\\abc_alert_dialog_button_bar_material.xml"
     },
     {
-        "merged": "D:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\city_picker.xml",
-        "source": "D:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\NXT_android\\library\\unspecified\\res\\layout\\city_picker.xml"
-    },
-    {
         "merged": "D:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_singlechoice_material.xml",
         "source": "D:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\layout\\select_dialog_singlechoice_material.xml"
+    },
+    {
+        "merged": "D:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\city_picker.xml",
+        "source": "D:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\NXT_android\\library\\unspecified\\res\\layout\\city_picker.xml"
     },
     {
         "merged": "D:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_outpage.xml",

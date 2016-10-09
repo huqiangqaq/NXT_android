@@ -12,10 +12,8 @@ import android.widget.TextView;
 import com.nxt.moderagricultrue.Constants;
 import com.nxt.moderagricultrue.R;
 import com.nxt.moderagricultrue.domain.Parcel;
-import com.nxt.moderagricultrue.findbyid.BuyPageDetailActivity;
 import com.nxt.moderagricultrue.findbyid.ParcelDetailActivity;
-import com.nxt.moderagricultrue.list.UpdateActivity;
-import com.nxt.moderagricultrue.parcelList.Update_ParcelListActivity;
+import com.nxt.moderagricultrue.list.parcelList.Update_ParcelListActivity;
 import com.nxt.zyl.ui.adapter.ZBaseAdapter;
 import com.nxt.zyl.util.ZToastUtils;
 

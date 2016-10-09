@@ -27,7 +27,7 @@ import com.nxt.moderagricultrue.R;
 import com.nxt.moderagricultrue.adapter.PlotAdapter;
 import com.nxt.moderagricultrue.domain.Plot;
 import com.nxt.moderagricultrue.findbyid.PlotDetailActivity;
-import com.nxt.moderagricultrue.plotList.Add_PlotListActivity;
+import com.nxt.moderagricultrue.list.plotList.Add_PlotListActivity;
 import com.nxt.zyl.data.ZDataTask;
 import com.nxt.zyl.util.ZToastUtils;
 

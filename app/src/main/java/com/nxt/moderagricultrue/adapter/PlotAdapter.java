@@ -12,10 +12,8 @@ import android.widget.TextView;
 import com.nxt.moderagricultrue.Constants;
 import com.nxt.moderagricultrue.R;
 import com.nxt.moderagricultrue.domain.Plot;
-import com.nxt.moderagricultrue.findbyid.BuyPageDetailActivity;
 import com.nxt.moderagricultrue.findbyid.PlotDetailActivity;
-import com.nxt.moderagricultrue.list.UpdateActivity;
-import com.nxt.moderagricultrue.plotList.Update_PlotListActivity;
+import com.nxt.moderagricultrue.list.plotList.Update_PlotListActivity;
 import com.nxt.zyl.ui.adapter.ZBaseAdapter;
 import com.nxt.zyl.util.ZToastUtils;
 

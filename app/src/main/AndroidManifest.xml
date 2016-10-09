@@ -133,13 +133,13 @@
             android:theme="@style/AppTheme"/>
         <activity android:name=".list.Update_AreaListActivity"
             android:theme="@style/AppTheme"/>
-        <activity android:name=".parcelList.Add_ParcelListActivity"
+        <activity android:name=".list.parcelList.Add_ParcelListActivity"
             android:theme="@style/AppTheme"/>
-        <activity android:name=".parcelList.Update_ParcelListActivity"
+        <activity android:name=".list.parcelList.Update_ParcelListActivity"
             android:theme="@style/AppTheme"/>
-        <activity android:name=".plotList.Add_PlotListActivity"
+        <activity android:name=".list.plotList.Add_PlotListActivity"
             android:theme="@style/AppTheme"/>
-        <activity android:name=".plotList.Update_PlotListActivity"
+        <activity android:name=".list.plotList.Update_PlotListActivity"
             android:theme="@style/AppTheme"/>
 
 

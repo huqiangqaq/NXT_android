@@ -142,16 +142,16 @@
             android:name="com.nxt.moderagricultrue.list.Update_AreaListActivity"
             android:theme="@style/AppTheme" />
         <activity
-            android:name="com.nxt.moderagricultrue.parcelList.Add_ParcelListActivity"
+            android:name="com.nxt.moderagricultrue.list.parcelList.Add_ParcelListActivity"
             android:theme="@style/AppTheme" />
         <activity
-            android:name="com.nxt.moderagricultrue.parcelList.Update_ParcelListActivity"
+            android:name="com.nxt.moderagricultrue.list.parcelList.Update_ParcelListActivity"
             android:theme="@style/AppTheme" />
         <activity
-            android:name="com.nxt.moderagricultrue.plotList.Add_PlotListActivity"
+            android:name="com.nxt.moderagricultrue.list.plotList.Add_PlotListActivity"
             android:theme="@style/AppTheme" />
         <activity
-            android:name="com.nxt.moderagricultrue.plotList.Update_PlotListActivity"
+            android:name="com.nxt.moderagricultrue.list.plotList.Update_PlotListActivity"
             android:theme="@style/AppTheme" />
 
         <!-- 新增和修改界面 -->

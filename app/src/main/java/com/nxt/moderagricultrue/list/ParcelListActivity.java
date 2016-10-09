@@ -27,7 +27,7 @@ import com.nxt.moderagricultrue.R;
 import com.nxt.moderagricultrue.adapter.ParcelAdapter;
 import com.nxt.moderagricultrue.domain.Parcel;
 import com.nxt.moderagricultrue.findbyid.ParcelDetailActivity;
-import com.nxt.moderagricultrue.parcelList.Add_ParcelListActivity;
+import com.nxt.moderagricultrue.list.parcelList.Add_ParcelListActivity;
 import com.nxt.zyl.data.ZDataTask;
 import com.nxt.zyl.util.ZToastUtils;
 

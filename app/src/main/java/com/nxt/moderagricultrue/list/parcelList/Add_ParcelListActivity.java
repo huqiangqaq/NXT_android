@@ -1,14 +1,11 @@
-package com.nxt.moderagricultrue.plotList;
-
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
+package com.nxt.moderagricultrue.list.parcelList;
 
 import com.nxt.moderagricultrue.BaseActivity;
 import com.nxt.moderagricultrue.R;
 
 import java.io.UnsupportedEncodingException;
 
-public class Update_PlotListActivity extends BaseActivity {
+public class Add_ParcelListActivity extends BaseActivity {
 
 
     @Override
@@ -18,6 +15,6 @@ public class Update_PlotListActivity extends BaseActivity {
 
     @Override
     protected int getLayout() {
-        return R.layout.activity_update__plot_list;
+        return R.layout.activity_add__parcel_list;
     }
 }

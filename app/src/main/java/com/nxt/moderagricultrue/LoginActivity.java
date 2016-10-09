@@ -66,7 +66,8 @@ public class LoginActivity extends BaseActivity {
             return;
         }
         showLoadingDialog("正在登录……");
-
+        String ss = String.format(Constants.LOGIN_URL,username,password);
+        Log.d(TAG, ss);
         mDataTask.get(String.format(Constants.LOGIN_URL,username,password),null,null,this);
     }
 

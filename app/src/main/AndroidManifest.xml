@@ -27,13 +27,13 @@
     <uses-permission android:name="android.permission.CALL_PHONE" />
 
     <application
-        tools:replace="android:icon,android:theme,android:label"
         android:name=".MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@android:style/Theme.Black.NoTitleBar">
+        android:theme="@android:style/Theme.Black.NoTitleBar"
+        tools:replace="android:icon,android:theme,android:label">
         <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -122,7 +122,51 @@
         <activity
             android:name=".list.UpdateActivity"
             android:theme="@style/AppTheme" />
-        <activity android:name=".list.AddActivity"
+        <activity
+            android:name=".list.AddActivity"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".list.Add_OutPageListActivity"
+            android:theme="@style/AppTheme"/>
+        <activity android:name=".list.Update_OutPageListActivity"
+            android:theme="@style/AppTheme"/>
+        <activity android:name=".list.Add_AreaListActivity"
+            android:theme="@style/AppTheme"/>
+        <activity android:name=".list.Update_AreaListActivity"
+            android:theme="@style/AppTheme"/>
+        <activity android:name=".parcelList.Add_ParcelListActivity"
+            android:theme="@style/AppTheme"/>
+        <activity android:name=".parcelList.Update_ParcelListActivity"
+            android:theme="@style/AppTheme"/>
+        <activity android:name=".plotList.Add_PlotListActivity"
+            android:theme="@style/AppTheme"/>
+        <activity android:name=".plotList.Update_PlotListActivity"
+            android:theme="@style/AppTheme"/>
+
+
+        <!--新增和修改界面-->
+        <activity android:name=".list.SeedList.Add_SeedListActivity"
+            android:theme="@style/AppTheme"/>
+        <activity android:name=".list.SeedList.Update_SeedListActivity"
+            android:theme="@style/AppTheme"/>
+        <activity android:name=".list.FertilizeLiset.Add_FertilizeListActivity"
+            android:theme="@style/AppTheme"/>
+        <activity android:name=".list.FertilizeLiset.Update_FertilizeListActivity"
+            android:theme="@style/AppTheme"/>
+        <activity android:name=".list.WateringList.Add_WateringListActivity"
+            android:theme="@style/AppTheme"/>
+        <activity android:name=".list.WateringList.Update_WateringListActivity"
+            android:theme="@style/AppTheme"/>
+        <activity android:name=".list.DiseasedList.Add_DiseasedListActivity"
+            android:theme="@style/AppTheme"/>
+        <activity android:name=".list.DiseasedList.Update_DiseasedListActivity"
+            android:theme="@style/AppTheme"/>
+        <activity android:name=".list.RecoveryList.Add_RecoveryListActivity"
+            android:theme="@style/AppTheme"/>
+        <activity android:name=".list.RecoveryList.Update_RecoveryListActivity"
+            android:theme="@style/AppTheme"/>
+        <activity android:name=".list.UserList.Add_UserListActivity"
+            android:theme="@style/AppTheme"/>
+        <activity android:name=".list.UserList.Update_UserListActivity"
             android:theme="@style/AppTheme"></activity>
     </application>
 

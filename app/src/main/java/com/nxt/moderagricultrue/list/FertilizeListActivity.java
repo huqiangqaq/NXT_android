@@ -3,6 +3,7 @@ package com.nxt.moderagricultrue.list;
 import android.content.Intent;
 import android.os.Handler;
 import android.os.Message;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.text.TextUtils;
 import android.util.Log;
@@ -26,7 +27,9 @@ import com.nxt.moderagricultrue.R;
 import com.nxt.moderagricultrue.adapter.FertilizeAdapter;
 import com.nxt.moderagricultrue.domain.Fertilize;
 import com.nxt.moderagricultrue.findbyid.FertilizeDetailActivity;
+import com.nxt.moderagricultrue.list.FertilizeLiset.Add_FertilizeListActivity;
 import com.nxt.zyl.data.ZDataTask;
+import com.nxt.zyl.util.ZToastUtils;
 
 import org.json.JSONObject;
 
@@ -48,6 +51,7 @@ public class FertilizeListActivity extends BaseActivity implements AdapterView.O
     private LinearLayout lineShaiXuan;
     private EditText et_01,et_02,et_03,et_04,et_05;
     private TextView tv_reset,tv_confirm;
+    private FloatingActionButton fab;
 
     private FertilizeAdapter mBuyPageAdapter;
     private List<Fertilize> buyPageList=new ArrayList<>();
@@ -104,6 +108,9 @@ public class FertilizeListActivity extends BaseActivity implements AdapterView.O
 
         tv_reset.setOnClickListener(this);
         tv_confirm.setOnClickListener(this);
+
+        fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab.setOnClickListener(this);
     }
 
     @Override
@@ -133,6 +140,10 @@ public class FertilizeListActivity extends BaseActivity implements AdapterView.O
                     Log.e(TAG,String.format(Constants.URL_02,buy));
                 }
                 lineShaiXuan.setVisibility(View.GONE);
+                break;
+            case R.id.fab:
+                startActivity(new Intent(this,Add_FertilizeListActivity.class));
+                ZToastUtils.showShort(this,"点击这里新增");
                 break;
         }
     }

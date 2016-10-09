@@ -3,6 +3,7 @@ package com.nxt.moderagricultrue.list;
 import android.content.Intent;
 import android.os.Handler;
 import android.os.Message;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.text.TextUtils;
 import android.util.Log;
@@ -28,6 +29,7 @@ import com.nxt.moderagricultrue.adapter.OutPageAdapter;
 import com.nxt.moderagricultrue.domain.OutPage;
 import com.nxt.moderagricultrue.findbyid.OutPageDetailActivity;
 import com.nxt.zyl.data.ZDataTask;
+import com.nxt.zyl.util.ZToastUtils;
 
 import org.json.JSONObject;
 
@@ -49,6 +51,7 @@ public class OutpageListActivity extends BaseActivity  implements AdapterView.On
     private LinearLayout lineShaiXuan;
     private EditText et_01,et_02,et_03,et_04,et_05;
     private TextView tv_reset,tv_confirm;
+    private FloatingActionButton fab;
 
     private OutPageAdapter mBuyPageAdapter;
     private List<OutPage> buyPageList=new ArrayList<>();
@@ -105,6 +108,10 @@ public class OutpageListActivity extends BaseActivity  implements AdapterView.On
 
         tv_reset.setOnClickListener(this);
         tv_confirm.setOnClickListener(this);
+
+        //floatactionbutton
+        fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab.setOnClickListener(this);
     }
 
     @Override
@@ -141,6 +148,10 @@ public class OutpageListActivity extends BaseActivity  implements AdapterView.On
                     Log.e(TAG,String.format(Constants.URL_02,buy));
                 }
                 lineShaiXuan.setVisibility(View.GONE);
+                break;
+            case R.id.fab:
+                startActivity(new Intent(this,Add_OutPageListActivity.class));
+                ZToastUtils.showShort(this,"点击这里新增");
                 break;
         }
     }

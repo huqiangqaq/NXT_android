@@ -129,6 +129,68 @@
         <activity
             android:name="com.nxt.moderagricultrue.list.AddActivity"
             android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.nxt.moderagricultrue.list.Add_OutPageListActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.nxt.moderagricultrue.list.Update_OutPageListActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.nxt.moderagricultrue.list.Add_AreaListActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.nxt.moderagricultrue.list.Update_AreaListActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.nxt.moderagricultrue.parcelList.Add_ParcelListActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.nxt.moderagricultrue.parcelList.Update_ParcelListActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.nxt.moderagricultrue.plotList.Add_PlotListActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.nxt.moderagricultrue.plotList.Update_PlotListActivity"
+            android:theme="@style/AppTheme" />
+
+        <!-- 新增和修改界面 -->
+        <activity
+            android:name="com.nxt.moderagricultrue.list.SeedList.Add_SeedListActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.nxt.moderagricultrue.list.SeedList.Update_SeedListActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.nxt.moderagricultrue.list.FertilizeLiset.Add_FertilizeListActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.nxt.moderagricultrue.list.FertilizeLiset.Update_FertilizeListActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.nxt.moderagricultrue.list.WateringList.Add_WateringListActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.nxt.moderagricultrue.list.WateringList.Update_WateringListActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.nxt.moderagricultrue.list.DiseasedList.Add_DiseasedListActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.nxt.moderagricultrue.list.DiseasedList.Update_DiseasedListActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.nxt.moderagricultrue.list.RecoveryList.Add_RecoveryListActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.nxt.moderagricultrue.list.RecoveryList.Update_RecoveryListActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.nxt.moderagricultrue.list.UserList.Add_UserListActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.nxt.moderagricultrue.list.UserList.Update_UserListActivity"
+            android:theme="@style/AppTheme" />
     </application>
 
 </manifest>

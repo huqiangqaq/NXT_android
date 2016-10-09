@@ -3,6 +3,7 @@ package com.nxt.moderagricultrue.list;
 import android.content.Intent;
 import android.os.Handler;
 import android.os.Message;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.text.TextUtils;
 import android.util.Log;
@@ -26,7 +27,9 @@ import com.nxt.moderagricultrue.R;
 import com.nxt.moderagricultrue.adapter.ParcelAdapter;
 import com.nxt.moderagricultrue.domain.Parcel;
 import com.nxt.moderagricultrue.findbyid.ParcelDetailActivity;
+import com.nxt.moderagricultrue.parcelList.Add_ParcelListActivity;
 import com.nxt.zyl.data.ZDataTask;
+import com.nxt.zyl.util.ZToastUtils;
 
 import org.json.JSONObject;
 
@@ -48,6 +51,7 @@ public class ParcelListActivity extends BaseActivity implements AdapterView.OnIt
     private LinearLayout lineShaiXuan;
     private EditText et_01,et_02,et_03,et_04,et_05;
     private TextView tv_reset,tv_confirm;
+    private FloatingActionButton fab;
 
     private ParcelAdapter mBuyPageAdapter;
     private List<Parcel> buyPageList=new ArrayList<>();
@@ -104,6 +108,8 @@ public class ParcelListActivity extends BaseActivity implements AdapterView.OnIt
 
         tv_reset.setOnClickListener(this);
         tv_confirm.setOnClickListener(this);
+        fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab.setOnClickListener(this);
     }
 
     @Override
@@ -140,6 +146,9 @@ public class ParcelListActivity extends BaseActivity implements AdapterView.OnIt
                 }
                 lineShaiXuan.setVisibility(View.GONE);
                 break;
+            case R.id.fab:
+                startActivity(new Intent(this,Add_ParcelListActivity.class));
+                ZToastUtils.showShort(this,"点击这里新增");
         }
     }
 

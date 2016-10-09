@@ -39,7 +39,7 @@ public class Fragment_two extends Fragment implements AdapterView.OnItemClickLis
     public String[] img_text = {"资料购进","资料发放","生产区管理","地块信息","地块整理","全部"
     };
     public String[] img_text_more = { "资料购进", "资料发放", "生产区管理", "地块信息", "地块整理", "播种信息",
-            "地块信息", "灌溉信息", "病虫害防治","采收记录","倒茬记录","人员管理" };
+            "施肥信息", "灌溉信息", "病虫害防治","采收记录","倒茬记录","人员管理" };
     public Integer[] imgs = { R.drawable.icon_01, R.drawable.icon_02,
             R.drawable.icon_03, R.drawable.icon_04,
             R.drawable.icon_05, R.drawable.icon_more,};

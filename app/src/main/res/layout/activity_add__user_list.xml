@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:scrollbars="none"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:background="@color/common_bg"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include layout="@layout/commen_add"/>
+
+        <LinearLayout
+            android:padding="15dp"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_gravity="center"
+                android:layout_width="45dp"
+                android:layout_height="wrap_content"
+                android:text="流水号:"
+                android:textSize="18sp"/>
+            <!--流水号-->
+            <EditText
+                android:layout_weight="1"
+                android:background="@drawable/common_shape_edit"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:id="@+id/id_" />
+        </LinearLayout>
+        <LinearLayout
+            android:padding="15dp"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_gravity="center"
+                android:layout_width="45dp"
+                android:layout_height="wrap_content"
+                android:text="姓名:"
+                android:textSize="18sp"/>
+            <!--姓名-->
+            <EditText
+                android:layout_weight="1"
+                android:background="@drawable/common_shape_edit"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:id="@+id/name" />
+        </LinearLayout>
+        <LinearLayout
+            android:padding="15dp"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_gravity="center"
+                android:layout_width="45dp"
+                android:layout_height="wrap_content"
+                android:text="性别:"
+                android:textSize="18sp"/>
+            <!--性别-->
+            <EditText
+                android:layout_weight="1"
+                android:background="@drawable/common_shape_edit"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:id="@+id/sex" />
+        </LinearLayout>
+        <LinearLayout
+            android:padding="15dp"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_gravity="center"
+                android:layout_width="45dp"
+                android:layout_height="wrap_content"
+                android:text="生日:"
+                android:textSize="18sp"/>
+            <!--生日-->
+            <EditText
+                android:layout_weight="1"
+                android:background="@drawable/common_shape_edit"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:id="@+id/birthday" />
+        </LinearLayout>
+        <LinearLayout
+            android:padding="15dp"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_gravity="center"
+                android:layout_width="45dp"
+                android:layout_height="wrap_content"
+                android:text="职称:"
+                android:textSize="18sp"/>
+            <!--职称-->
+            <EditText
+                android:layout_weight="1"
+                android:background="@drawable/common_shape_edit"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:id="@+id/filed1" />
+        </LinearLayout>
+        <LinearLayout
+            android:padding="15dp"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_gravity="center"
+                android:layout_width="45dp"
+                android:layout_height="wrap_content"
+                android:text="专业:"
+                android:textSize="18sp"/>
+            <!--专业-->
+            <EditText
+                android:layout_weight="1"
+                android:background="@drawable/common_shape_edit"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:id="@+id/filed2" />
+        </LinearLayout>
+        <LinearLayout
+            android:padding="15dp"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_gravity="center"
+                android:layout_width="45dp"
+                android:layout_height="wrap_content"
+                android:text="工种:"
+                android:textSize="18sp"/>
+            <!--工种-->
+            <EditText
+                android:layout_weight="1"
+                android:background="@drawable/common_shape_edit"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:id="@+id/filed3" />
+        </LinearLayout>
+
+
+
+
+        <!--<LinearLayout-->
+        <!--android:padding="15dp"-->
+        <!--android:gravity="center"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:orientation="horizontal">-->
+        <!--<TextView-->
+
+        <!--android:layout_gravity="center"-->
+        <!--android:layout_width="45dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="销售单位:"-->
+        <!--android:textSize="18sp"/>-->
+        <!--&lt;!&ndash;销售单位&ndash;&gt;-->
+        <!--<EditText-->
+        <!--android:layout_weight="1"-->
+        <!--android:background="@drawable/common_shape_edit"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="35dp"-->
+        <!--android:id="@+id/vcsalecomp" />-->
+        <!--</LinearLayout>-->
+
+        <!--<LinearLayout-->
+        <!--android:padding="15dp"-->
+        <!--android:gravity="center"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:orientation="horizontal">-->
+        <!--<TextView-->
+        <!--android:layout_gravity="center"-->
+        <!--android:layout_width="45dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="入库时间:"-->
+        <!--android:textSize="18sp"/>-->
+        <!--&lt;!&ndash;入库时间&ndash;&gt;-->
+        <!--<EditText-->
+        <!--android:layout_weight="1"-->
+        <!--android:background="@drawable/common_shape_edit"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="35dp"-->
+        <!--android:id="@+id/dtinstoredate" />-->
+        <!--</LinearLayout>-->
+
+        <!--<LinearLayout-->
+        <!--android:padding="15dp"-->
+        <!--android:gravity="center"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:orientation="horizontal">-->
+        <!--<TextView-->
+        <!--android:layout_gravity="center"-->
+        <!--android:layout_width="45dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="入库人:"-->
+        <!--android:textSize="18sp"/>-->
+        <!--&lt;!&ndash;入库人&ndash;&gt;-->
+        <!--<EditText-->
+        <!--android:layout_weight="1"-->
+        <!--android:background="@drawable/common_shape_edit"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="35dp"-->
+        <!--android:id="@+id/vcinstoreman" />-->
+        <!--</LinearLayout>-->
+        <Button
+            android:id="@+id/btn_add"
+            android:layout_width="280dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_btn"
+            android:text="确认添加"
+            android:textColor="#ffffff"
+            android:textSize="18sp"
+            android:layout_marginBottom="20dp"/>
+
+    </LinearLayout>
+</ScrollView>

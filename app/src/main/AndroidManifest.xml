@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.nxt.moderagricultrue">
 
     <uses-permission android:name="android.permission.VIBRATE" />
@@ -26,6 +27,7 @@
     <uses-permission android:name="android.permission.CALL_PHONE" />
 
     <application
+        tools:replace="android:icon,android:theme,android:label"
         android:name=".MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -114,7 +116,13 @@
         <activity
             android:name=".findbyid.UserDetailActivity"
             android:theme="@style/AppTheme" />
-        <activity android:name=".Main2Activity"
+        <activity
+            android:name=".Main2Activity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".list.UpdateActivity"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".list.AddActivity"
             android:theme="@style/AppTheme"></activity>
     </application>
 

@@ -1,6 +1,7 @@
 package com.nxt.moderagricultrue.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.text.TextUtils;
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,8 +9,11 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.nxt.moderagricultrue.Constants;
 import com.nxt.moderagricultrue.R;
 import com.nxt.moderagricultrue.domain.BuyPage;
+import com.nxt.moderagricultrue.findbyid.BuyPageDetailActivity;
+import com.nxt.moderagricultrue.list.UpdateActivity;
 import com.nxt.zyl.ui.adapter.ZBaseAdapter;
 import com.nxt.zyl.util.ZToastUtils;
 
@@ -24,6 +28,7 @@ import java.util.Map;
 public class BuyPageAdapter extends ZBaseAdapter<BuyPage> implements View.OnClickListener {
     private boolean isShow = false;
     private Context mContext;
+    private int itemPosition = 0;
     private Map<Integer,Boolean> map = new HashMap<>();
 
     public BuyPageAdapter(Context context, List<BuyPage> dataList) {
@@ -32,7 +37,7 @@ public class BuyPageAdapter extends ZBaseAdapter<BuyPage> implements View.OnClic
     }
 
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
+    public View getView(final int position, View convertView, ViewGroup parent) {
 
         final Holder holder;
         if (convertView == null) {
@@ -50,21 +55,28 @@ public class BuyPageAdapter extends ZBaseAdapter<BuyPage> implements View.OnClic
         } else {
             holder = (Holder) convertView.getTag();
         }
+        //用map来记录每个item的点击状态,默认一开始都是false
+        for (int i=0;i<dataList.size();i++){
+            map.put(i,false);
+        }
         convertView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (isShow){
+                itemPosition = position;
+                if (map.get(position)){
                     holder.ll_content.setVisibility(View.GONE);
                     holder.iv_more.setImageResource(R.mipmap.icon_btn_01);
-                    isShow = false;
+                    map.put(position,false);
                 }else {
                     holder.ll_content.setVisibility(View.VISIBLE);
                     holder.iv_more.setImageResource(R.mipmap.icon_btn_02);
-                    isShow = true;
+                    map.put(position,true);
+
                 }
 
             }
         });
+
         holder.ll_detail.setOnClickListener(this);
         holder.ll_update.setOnClickListener(this);
         final BuyPage article = dataList.get(position);
@@ -83,9 +95,11 @@ public class BuyPageAdapter extends ZBaseAdapter<BuyPage> implements View.OnClic
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.ll_detail:
+                mContext.startActivity(new Intent(mContext, BuyPageDetailActivity.class).putExtra(Constants.VCRECNO,dataList.get(itemPosition)));
                 ZToastUtils.showShort(mContext,"点击这里进入详情页面");
                 break;
             case R.id.ll_update:
+                mContext.startActivity(new Intent(mContext, UpdateActivity.class).putExtra(Constants.VCRECNO,dataList.get(itemPosition)));
                 ZToastUtils.showShort(mContext,"点击这里进入修改页面");
                 break;
         }

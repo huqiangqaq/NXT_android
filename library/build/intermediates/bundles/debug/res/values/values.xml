@@ -9,6 +9,7 @@
     <color name="color_accent">#4CAF50</color>
     <color name="color_primary">#8BC34A</color>
     <color name="color_primary_dark">#689F38</color>
+    <color name="doctor_main_color">#EB6001</color>
     <declare-styleable name="AVLoadingIndicatorView"><attr name="indicator">
             <flag name="BallPulse" value="0"/>
             <flag name="BallGridPulse" value="1"/>

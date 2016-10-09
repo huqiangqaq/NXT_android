@@ -151,6 +151,7 @@ public class SwipeListActivity extends BaseActivity implements AdapterView.OnIte
                 lineShaiXuan.setVisibility(View.GONE);
                 break;
             case R.id.fab:
+                startActivity(new Intent(this,AddActivity.class));
                 ZToastUtils.showShort(this,"点击这里新增");
                 break;
         }

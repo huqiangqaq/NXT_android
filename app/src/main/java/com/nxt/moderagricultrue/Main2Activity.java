@@ -5,27 +5,41 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.RelativeLayout;
 
+import com.nxt.moderagricultrue.domain.LoginReturn;
 import com.nxt.moderagricultrue.fragment.Fragment_One;
 import com.nxt.moderagricultrue.fragment.Fragment_two;
 
 import java.io.UnsupportedEncodingException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Main2Activity extends BaseActivity{
     private RelativeLayout rl_content;
     private Fragment fragment_one,fragment_two;
     private boolean isRoot = true;
+    private List<LoginReturn.DefaultListABean> list = new ArrayList<>();
+    private MyApplication application;
     @Override
     protected void initView() throws UnsupportedEncodingException {
+        application = MyApplication.getInstance();
         fragment_one = new Fragment_One();
         fragment_two = new Fragment_two();
         rl_content = (RelativeLayout) findViewById(R.id.rl_content);
-        //此处添加判断,从服务器取得账户的权限
-        if (isRoot){
-            //加载多个权限的碎片
+        String flag = getIntent().getStringExtra("loginUser");
+        if ("2".equalsIgnoreCase(flag)){
+            //超级用户
             getSupportFragmentManager().beginTransaction().add(R.id.rl_content,fragment_two).commit();
         }else {
-            getSupportFragmentManager().beginTransaction().add(R.id.rl_content,fragment_one).commit();
+           list = application.getList();
+            if (list.size()<2){
+                getSupportFragmentManager().beginTransaction().add(R.id.rl_content,fragment_one).commit();
+            }
+            getSupportFragmentManager().beginTransaction().add(R.id.rl_content,fragment_two).commit();
+
         }
+
+
+
 
     }
 

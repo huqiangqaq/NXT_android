@@ -201,6 +201,7 @@ public class SwipeListActivity extends BaseActivity implements AdapterView.OnIte
             return;
         }else {
             String s = String.format(Constants.URL_01,page);
+            Log.d("SwipeListActivity",s);
             zDataTask.get(String.format(Constants.URL_01,page),null,null,this);
         }
     }

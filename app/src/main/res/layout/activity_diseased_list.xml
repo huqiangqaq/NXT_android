@@ -16,6 +16,7 @@
             android:layout_height="wrap_content"
             android:src="@mipmap/icon_09"
             app:rippleColor="#33728dff"
+            android:layout_marginBottom="15dp"
             app:elevation="6dp"
             app:pressedTranslationZ="12dp"
             android:layout_alignParentBottom="true"

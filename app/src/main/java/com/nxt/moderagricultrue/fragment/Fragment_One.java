@@ -11,8 +11,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
+import com.nxt.moderagricultrue.Constants;
 import com.nxt.moderagricultrue.LoginActivity;
 import com.nxt.moderagricultrue.R;
+import com.nxt.moderagricultrue.list.OutpageListActivity;
+import com.nxt.moderagricultrue.list.SwipeListActivity;
 import com.nxt.zyl.util.ZToastUtils;
 
 /**
@@ -58,7 +61,7 @@ public class Fragment_One extends Fragment implements View.OnClickListener {
                         handler.sendEmptyMessage(0x123);
                     }
                 }, 1000);
-                startActivity(new Intent(getActivity(), LoginActivity.class));
+                startActivity(new Intent(getActivity(), SwipeListActivity.class).putExtra(Constants.URL,Constants.URL_01));
                 //生产资料购进
                 ZToastUtils.showShort(getActivity(), "生产资料购进");
                 break;
@@ -70,6 +73,7 @@ public class Fragment_One extends Fragment implements View.OnClickListener {
                         handler.sendEmptyMessage(0x124);
                     }
                 }, 1000);
+                startActivity(new Intent(getActivity(), OutpageListActivity.class).putExtra(Constants.URL,Constants.URL_01));
                 //生产资料发放
                 ZToastUtils.showShort(getActivity(), "生产资料发放");
                 break;

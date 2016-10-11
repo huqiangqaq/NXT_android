@@ -34,24 +34,39 @@ public class Constants {
      */
     public static final String UPDATE_URL_01 = TEST_URL+"/datum/buy/update.jhtml?vcrecno=%s&vccultivar=%s&itype=%s&dtbuy=%s&fnum=%s" +
             "&vcbuyman=%s&vcmadecomp=%s&vcsalecomp=%s&dtinstoredate=%s&vcinstoreman=%s";
-    public static final String UPDATE_URL_02 = TEST_URL+"/datum/out/update.jhtml?vcopeerateuser=%s&vccultivar=%s&itype=%s&dtgrant=%s&fnum=%s"+
+    public static final String UPDATE_URL_02 = TEST_URL+"/datum/out/update.jhtml?vcrecno=%s&vccultivar=%s&itype=%s&dtgrant=%s&fnum=%s"+
             "&vcreceiver=%s&vcgrantman=%s";
-    public static final String UPDATE_URL_03 = TEST_URL+"/area/creatArea.jhtml?vcoperateuser=%s&vcareadesc=%s";
-    public static final String UPDATE_URL_04 = TEST_URL+"/parcel/creatParcel.jhtml?vcareano=%s&vcparceldesc=%s&fparcelarea=%s"+
-            "vcpurpose=%s&fplantarea=%s&vcmanager=%s&istatus=%s&fgisx=%s&fgisy=%s";
-    public static final String UPDATE_URL_05 = TEST_URL+"/plot/tidy/update.jhtml?vccutsno=%s&vcparcelno=%s&vcparceldesc=%s"+
+    public static final String UPDATE_URL_03 = TEST_URL+"/area/creatArea.jhtml?vcrecno=%s&vcoperateuser=%s&vcareadesc=%s";
+    public static final String UPDATE_URL_04 = TEST_URL+"/parcel/creatParcel.jhtml?vcrecno=%s&vcareano=%s&vcparceldesc=%s&fparcelarea=%s"+
+            "&vcpurpose=%s&fplantarea=%s&vcmanager=%s&istatus=%s&fgisx=%s&fgisy=%s";
+    public static final String UPDATE_URL_05 = TEST_URL+"/plot/tidy/update.jhtml?vcrecno=%s&vccutsno=%s&parcel=%s&vcparceldesc=%s"+
             "&dtreadjust=%s&vcreadjustpattern=%s&vcdisinfect=%s";
     //播种记录
-    public static final String UPDATE_URL_06 = TEST_URL+"seed/update.jhtml?vcparceldesc=%s&vccutsno=%s&vcbreed=%s&dtseeddate=%s"+
+    public static final String UPDATE_URL_06 = TEST_URL+"/seed/update.jhtml?vcrecno=%s&vcparceldesc=%s&vccutsno=%s&vcbreed=%s&dtseeddate=%s"+
             "&vcseedpartten=%s&vcseeddensity=%s&vcfertilize=%s&dtfirstirrigate=%s";
     //施肥记录
-    public static final String UPDATE_URL_07 = TEST_URL+"fertilize/update.jhtml?vcparcelno=%s&vcparceldesc=%s&vccutsno=%s"+
+    public static final String UPDATE_URL_07 = TEST_URL+"/fertilize/update.jhtml?vcrecno=%s&vcparcelno=%s&vcparceldesc=%s&vccutsno=%s"+
             "&dtfertilizedate=%s&vcfertilizenum=%s&vcfertilizerrate=%s";
     //灌溉记录
+    public static final String UPDATE_URL_08 = TEST_URL+"/watering/waterUpdate.jhtml?vcrecno=%s&vcparceldesc=%s&vccutsno=%s&dtirrigatedate=%s&fwastewater=%s" +
+            "&vcoperateuser=%s&dtoperatedate=%s";
     //病虫害防治
+    public static final String UPDATE_URL_09 = TEST_URL+"/diseased/diseasedUpdate.jhtml?vcrecno=%s&vcparceldesc=%s&vcdrug=%s&dtpharmacydate=%s" +
+            "&dtpharmacynum=%s&dtpharmacypatten=%s";
     //采收记录
+    public static final String UPDATE_URL_10 = TEST_URL+"/recovery/update.jhtml?vcrecno=%s&vcparceldesc=%s&vccutsno=%s&dtrecoverydate=%s"+
+            "&vcrecoveryman=%s&vcmaturity=%s&frecovery=%s";
     //茬(批)次记录
     //人员管理
+    public static final String UPDATE_URL_12 = TEST_URL+"/user/update.jhtml?vcrecno=%s&id_=%s&name_=%s&sex_=%s&birthday_=%s&filed1_=%s"+
+            "filed2_=%s&filed_3=%s";
+
+
+
+
+
+
+
     /**
      * 新增
      */
@@ -62,22 +77,37 @@ public class Constants {
     public static final String ADD_URL_02 = TEST_URL+"/datum/out/create.jhtml?vcopeerateuser=%s&vcorgno=%s&vccultivar=%s&itype=%s&dtgrant=%s&fnum=%s"+
             "&vcreceiver=%s&vcgrantman=%s";
     //生产区管理
-    public static final String ADD_URL_03 = TEST_URL+"/area/creatArea.jhtml?vcoperateuser=%s&vcareadesc=%s";
+    public static final String ADD_URL_03 = TEST_URL+"/area/creatArea.jhtml?vcorgno=%s&vcoperateuser=%s&vcareadesc=%s";
     //地块信息
     public static final String ADD_URL_04 = TEST_URL+"/parcel/creatParcel.jhtml?vcoperateuser=%s&vcorgno=%s&vcareano=%s&vcparceldesc=%s&fparcelarea=%s"+
             "&vcpurpose=%s&fplantarea=%s&vcmanager=%s&istatus=%s&fgisx=%s&fgisy=%s";
     //地块整理
-    public static final String ADD_URL_05 = TEST_URL+"/plot/tidy/create.jhtml?vcoperateuser=%s&vcorgno=%s&vccutsno=%s&vcparcelno=%s&vcparceldesc=%s"+
+    public static final String ADD_URL_05 = TEST_URL+"/plot/tidy/create.jhtml?vcoperateuser=%s&vcorgno=%s&vccutsno=%s&parcel=%s&vcparceldesc=%s"+
             "&dtreadjust=%s&vcreadjustpattern=%s&vcdisinfect=%s";
     //播种记录
-    public static final String ADD_URL_06 = TEST_URL+"seed/create.jhtml?vcoperateuser=%s&vcorgno=%s&vcparceldesc=%s&vccutsno=%s&vcbreed=%s&dtseeddate=%s"+
+    public static final String ADD_URL_06 = TEST_URL+"/seed/create.jhtml?vcoperateuser=%s&vcorgno=%s&vcparceldesc=%s&vccutsno=%s&vcbreed=%s&dtseeddate=%s"+
             "&vcseedpartten=%s&vcseeddensity=%s&vcfertilize=%s&dtfirstirrigate=%s";
     //施肥记录
-    public static final String ADD_URL_07 = TEST_URL+"fertilize/create.jhtml?vcoperateuser=%s&vcorgno=%s&vcparcelno=%s&vcparceldesc=%s&vccutsno=%s"+
+    public static final String ADD_URL_07 = TEST_URL+"/fertilize/create.jhtml?vcoperateuser=%s&vcorgno=%s&vcparcelno=%s&vcparceldesc=%s&vccutsno=%s"+
             "&dtfertilizedate=%s&vcfertilizenum=%s&vcfertilizerrate=%s";
     //灌溉记录
+    public static final String ADD_URL_08 = TEST_URL+"/watering/waterAdd.jhtml?vcorgno=%s&vcparceldesc=%s&vccutsno=%s&dtirrigatedate=%s&fwastewater=%s"+
+            "vcoperateuser=%s&dtoperatedate=%s";
     //病虫害防治
+    public static final String ADD_URL_09 = TEST_URL+"/diseased/diseased.jhtml?vcoperateuser=%s&vcorgno=%s&vcparceldesc=%s&vcdrug=%s&dtpharmacydate=%s"+
+            "&dtpharmacynum=%s&dtpharmacypatten=%s";
     //采收记录
+    public static final String ADD_URL_10 = TEST_URL+"/recovery/save.jhtml?vcoperateuser=%s&vcorgno=%s&vcparceldesc=%s&vccutsno=%s&dtrecoverydate=%s"+
+            "&vcrecoveryman=%s&vcmaturity=%s&frecovery=%s";
     //茬(批)次记录
     //人员管理
+
+
+    /**
+     * 下拉列表
+     */
+    public static final String SPINNER_URL_01 = TEST_URL+"/parcel/comboboxList.jhtml?vcorgno=";
+    public static final String SPINNER_URL_02 = TEST_URL+"/diseased/listParceComboBoxData.jhtml?vcorgno=";
+    public static final String Spinner_URL_ZHA = TEST_URL+"/diseased/getseedbatchno.jhtml?parcel=";
+
 }

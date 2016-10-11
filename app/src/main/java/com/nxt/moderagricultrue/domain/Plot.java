@@ -88,4 +88,19 @@ public class Plot implements Serializable {
     public void setDtoperatedate(String dtoperatedate) {
         this.dtoperatedate = dtoperatedate;
     }
+
+    @Override
+    public String toString() {
+        return "Plot{" +
+                "vcrecno='" + vcrecno + '\'' +
+                ", vccutsno='" + vccutsno + '\'' +
+                ", vcparcelno='" + vcparcelno + '\'' +
+                ", vcparceldesc='" + vcparceldesc + '\'' +
+                ", dtreadjust='" + dtreadjust + '\'' +
+                ", vcreadjustpattern='" + vcreadjustpattern + '\'' +
+                ", vcdisinfect='" + vcdisinfect + '\'' +
+                ", vcoperateuser='" + vcoperateuser + '\'' +
+                ", dtoperatedate='" + dtoperatedate + '\'' +
+                '}';
+    }
 }

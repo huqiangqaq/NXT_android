@@ -11,6 +11,7 @@
 
         <include layout="@layout/commen_add"/>
 
+
         <LinearLayout
             android:padding="15dp"
             android:gravity="center"
@@ -29,7 +30,7 @@
                 android:background="@drawable/common_shape_edit"
                 android:layout_width="match_parent"
                 android:layout_height="35dp"
-                android:id="@+id/vcareadesc" />
+                android:id="@+id/et_vcareadesc" />
         </LinearLayout>
         <LinearLayout
             android:padding="15dp"
@@ -49,7 +50,7 @@
                 android:background="@drawable/common_shape_edit"
                 android:layout_width="match_parent"
                 android:layout_height="35dp"
-                android:id="@+id/vcoperateuser" />
+                android:id="@+id/et_vcoperateuser" />
         </LinearLayout>
         <Button
             android:id="@+id/btn_add"

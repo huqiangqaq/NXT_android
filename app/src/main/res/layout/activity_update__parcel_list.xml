@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <include layout="@layout/commen_update"/>
+        <include layout="@layout/commen_add"/>
 
         <LinearLayout
             android:padding="15dp"
@@ -22,15 +22,16 @@
                 android:layout_gravity="center"
                 android:layout_width="45dp"
                 android:layout_height="wrap_content"
-                android:text="编号:"
+                android:text="产区编号:"
                 android:textSize="18sp"/>
             <!--编号-->
-            <EditText
+            <Spinner
                 android:layout_weight="1"
                 android:background="@drawable/common_shape_edit"
                 android:layout_width="match_parent"
                 android:layout_height="35dp"
-                android:id="@+id/vcareano" />
+                android:id="@+id/sp_vcareano"
+                android:spinnerMode="dropdown"/>
         </LinearLayout>
         <LinearLayout
             android:padding="15dp"
@@ -50,7 +51,7 @@
                 android:background="@drawable/common_shape_edit"
                 android:layout_width="match_parent"
                 android:layout_height="35dp"
-                android:id="@+id/vcparceldesc" />
+                android:id="@+id/et_vcparceldesc" />
         </LinearLayout>
         <LinearLayout
             android:padding="15dp"
@@ -70,7 +71,8 @@
                 android:background="@drawable/common_shape_edit"
                 android:layout_width="match_parent"
                 android:layout_height="35dp"
-                android:id="@+id/fparcelarea" />
+                android:id="@+id/et_fparcelarea"
+                android:inputType="numberDecimal"/>
         </LinearLayout>
         <LinearLayout
             android:padding="15dp"
@@ -90,7 +92,7 @@
                 android:background="@drawable/common_shape_edit"
                 android:layout_width="match_parent"
                 android:layout_height="35dp"
-                android:id="@+id/vcpurpose" />
+                android:id="@+id/et_vcpurpose" />
         </LinearLayout>
         <LinearLayout
             android:padding="15dp"
@@ -110,7 +112,8 @@
                 android:background="@drawable/common_shape_edit"
                 android:layout_width="match_parent"
                 android:layout_height="35dp"
-                android:id="@+id/fplantarea" />
+                android:id="@+id/et_fplantarea"
+                android:inputType="numberDecimal"/>
         </LinearLayout>
 
         <LinearLayout
@@ -131,8 +134,72 @@
                 android:background="@drawable/common_shape_edit"
                 android:layout_width="match_parent"
                 android:layout_height="35dp"
-                android:id="@+id/vcmanager" />
+                android:id="@+id/et_vcmanager" />
         </LinearLayout>
+        <LinearLayout
+            android:padding="15dp"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_gravity="center"
+                android:layout_width="45dp"
+                android:layout_height="wrap_content"
+                android:text="状态:"
+                android:textSize="18sp"/>
+            <!--状态-->
+            <EditText
+                android:layout_weight="1"
+                android:background="@drawable/common_shape_edit"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:id="@+id/et_istatus"
+                android:inputType="number"/>
+        </LinearLayout>
+        <LinearLayout
+            android:padding="15dp"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_gravity="center"
+                android:layout_width="45dp"
+                android:layout_height="wrap_content"
+                android:text="坐标X:"
+                android:textSize="18sp"/>
+            <!--负责人-->
+            <EditText
+                android:layout_weight="1"
+                android:background="@drawable/common_shape_edit"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:id="@+id/et_fgisx"
+                android:inputType="numberDecimal"/>
+        </LinearLayout>
+        <LinearLayout
+            android:padding="15dp"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_gravity="center"
+                android:layout_width="45dp"
+                android:layout_height="wrap_content"
+                android:text="坐标Y:"
+                android:textSize="18sp"/>
+            <!--状态-->
+            <EditText
+                android:layout_weight="1"
+                android:background="@drawable/common_shape_edit"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:id="@+id/et_fgisy"
+                android:inputType="numberDecimal"/>
+        </LinearLayout>
+
 
         <!--<LinearLayout-->
         <!--android:padding="15dp"-->
@@ -198,13 +265,13 @@
         <!--android:id="@+id/vcinstoreman" />-->
         <!--</LinearLayout>-->
         <Button
-            android:id="@+id/btn_add"
+            android:id="@+id/btn_update"
             android:layout_width="280dp"
             android:layout_height="45dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="10dp"
             android:background="@drawable/bg_btn"
-            android:text="确认修改"
+            android:text="确认添加"
             android:textColor="#ffffff"
             android:textSize="18sp"
             android:layout_marginBottom="20dp"/>

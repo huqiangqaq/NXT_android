@@ -50,7 +50,8 @@
                 android:background="@drawable/common_shape_edit"
                 android:layout_width="match_parent"
                 android:layout_height="35dp"
-                android:id="@+id/et_itype" />
+                android:id="@+id/et_itype"
+                android:inputType="number"/>
         </LinearLayout>
         <LinearLayout
             android:padding="15dp"
@@ -70,7 +71,7 @@
                 android:background="@drawable/common_shape_edit"
                 android:layout_width="match_parent"
                 android:layout_height="35dp"
-                android:id="@+id/et_dtbuy" />
+                android:id="@+id/et_dtgrant" />
         </LinearLayout>
         <LinearLayout
             android:padding="15dp"
@@ -110,7 +111,7 @@
                 android:background="@drawable/common_shape_edit"
                 android:layout_width="match_parent"
                 android:layout_height="35dp"
-                android:id="@+id/vcreceiver" />
+                android:id="@+id/et_vcreceiver" />
         </LinearLayout>
 
         <LinearLayout
@@ -131,7 +132,7 @@
                 android:background="@drawable/common_shape_edit"
                 android:layout_width="match_parent"
                 android:layout_height="35dp"
-                android:id="@+id/vcmadecomp" />
+                android:id="@+id/et_vcgrantman" />
         </LinearLayout>
 
         <!--<LinearLayout-->
@@ -198,7 +199,7 @@
         <!--android:id="@+id/vcinstoreman" />-->
         <!--</LinearLayout>-->
         <Button
-            android:id="@+id/btn_add"
+            android:id="@+id/btn_update"
             android:layout_width="280dp"
             android:layout_height="45dp"
             android:layout_gravity="center_horizontal"

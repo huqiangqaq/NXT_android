@@ -21,6 +21,7 @@ public abstract class ZBaseAdapter<T> extends BaseAdapter {
     protected LayoutInflater mLayoutInflater;
     protected List<T> dataList;
 
+
     public ZBaseAdapter(Context context, List<T> dataList) {
         this.mContext = context;
         this.dataList = dataList;

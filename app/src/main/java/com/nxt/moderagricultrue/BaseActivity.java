@@ -4,6 +4,7 @@ import android.app.DatePickerDialog;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.os.Bundle;
+import android.os.PersistableBundle;
 import android.support.v4.app.FragmentActivity;
 import android.view.View;
 import android.view.WindowManager;
@@ -46,7 +47,6 @@ public abstract class BaseActivity extends FragmentActivity implements
             e.printStackTrace();
         }
     }
-
 
     /**
      * 初始化界面

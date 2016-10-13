@@ -39,11 +39,6 @@
         android:supportsRtl="true"
         android:theme="@android:style/Theme.Black.NoTitleBar" >
         <activity android:name="com.nxt.moderagricultrue.LoginActivity" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name="com.nxt.moderagricultrue.MainActivity"
@@ -191,6 +186,15 @@
         <activity
             android:name="com.nxt.moderagricultrue.list.UserList.Update_UserListActivity"
             android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.nxt.moderagricultrue.TestActivity"
+            android:theme="@style/Theme.AppCompat" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

@@ -54,7 +54,7 @@ public class UserListActivity extends BaseActivity implements AdapterView.OnItem
     private LinearLayout lineShaiXuan;
     private EditText et_01,et_02,et_03,et_04,et_05;
     private TextView tv_reset,tv_confirm;
-    private FloatingActionButton fab;
+//    private FloatingActionButton fab;
 
     private UserAdapter mBuyPageAdapter;
     private List<User> buyPageList=new ArrayList<>();
@@ -111,9 +111,9 @@ public class UserListActivity extends BaseActivity implements AdapterView.OnItem
 
         tv_reset.setOnClickListener(this);
         tv_confirm.setOnClickListener(this);
-
-        fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(this);
+//
+//        fab = (FloatingActionButton) findViewById(R.id.fab);
+//        fab.setOnClickListener(this);
     }
 
     @Override
@@ -143,10 +143,10 @@ public class UserListActivity extends BaseActivity implements AdapterView.OnItem
                 }
                 lineShaiXuan.setVisibility(View.GONE);
                 break;
-            case R.id.fab:
-                startActivity(new Intent(this,Add_UserListActivity.class));
-                ZToastUtils.showShort(this,"点击这里新增");
-                break;
+//            case R.id.fab:
+//                startActivity(new Intent(this,Add_UserListActivity.class));
+//                ZToastUtils.showShort(this,"点击这里新增");
+//                break;
         }
     }
 

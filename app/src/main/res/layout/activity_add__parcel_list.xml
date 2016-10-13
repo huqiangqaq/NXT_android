@@ -42,7 +42,7 @@
                 android:layout_gravity="center"
                 android:layout_width="45dp"
                 android:layout_height="wrap_content"
-                android:text="产区编号:"
+                android:text="产区名称:"
                 android:textSize="18sp"/>
             <!--编号-->
             <Spinner
@@ -50,7 +50,7 @@
                 android:background="@drawable/common_shape_edit"
                 android:layout_width="match_parent"
                 android:layout_height="35dp"
-                android:id="@+id/sp_vcareano"
+                android:id="@+id/sp_desc"
                 android:spinnerMode="dropdown"/>
         </LinearLayout>
         <LinearLayout
@@ -63,7 +63,7 @@
                 android:layout_gravity="center"
                 android:layout_width="45dp"
                 android:layout_height="wrap_content"
-                android:text="名称:"
+                android:text="地块名称:"
                 android:textSize="18sp"/>
             <!--名称-->
             <EditText

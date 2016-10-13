@@ -30,9 +30,9 @@ import cn.pedant.SweetAlert.SweetAlertDialog;
 import okhttp3.Call;
 
 public class Update_PlotListActivity extends BaseActivity {
-    private EditText et_zha,et_vcparcelno,et_dtreadjust,et_vcreadjustpattern,et_vcdisinfect;
+    private EditText et_zha,et_dtreadjust,et_vcreadjustpattern,et_vcdisinfect;
     private String zha,vcparcelno,vcparceldesc,dtreadjust,vcreadjustpattern,vcdisinfect;
-    private Spinner sp_vcparceldesc;
+    private Spinner sp_vcparceldesc,sp_vcparcelno;
 
     private Button btn_update;
     private ZDataTask mDataTask;
@@ -49,7 +49,7 @@ public class Update_PlotListActivity extends BaseActivity {
     @Override
     protected void initView() throws UnsupportedEncodingException {
         et_zha = (EditText) findViewById(R.id.et_zha);
-        et_vcparcelno = (EditText) findViewById(R.id.et_vcparcelno);
+        sp_vcparcelno = (Spinner) findViewById(R.id.sp_vcparcelno);
         et_dtreadjust = (EditText) findViewById(R.id.et_dtreadjust);
         et_vcreadjustpattern = (EditText) findViewById(R.id.et_vcreadjustpattern);
         et_vcdisinfect = (EditText) findViewById(R.id.et_vcdisinfect);
@@ -66,7 +66,6 @@ public class Update_PlotListActivity extends BaseActivity {
         mDataTask= MyApplication.getInstance().getZDataTask();
         plot= (Plot) getIntent().getSerializableExtra(Constants.VCRECNO);
         Log.d("PLOT",plot.toString());
-        et_vcparcelno.setText(plot.getVcparcelno()+"");
         et_dtreadjust.setText(plot.getDtreadjust());
         et_vcreadjustpattern.setText(plot.getVcreadjustpattern());
         et_vcdisinfect.setText(plot.getVcdisinfect());
@@ -87,6 +86,8 @@ public class Update_PlotListActivity extends BaseActivity {
                         spinner_list_num = JsonUtil.parseJson_spnner(response,"value");
                         sp_vcparceldesc.setAdapter(new ArrayAdapter<String>(Update_PlotListActivity.this,android.R.layout.simple_spinner_dropdown_item,spinner_list));
                         sp_vcparceldesc.setSelection(0);
+                        sp_vcparcelno.setAdapter(new ArrayAdapter<String>(Update_PlotListActivity.this,android.R.layout.simple_spinner_dropdown_item,spinner_list_num));
+                        sp_vcparcelno.setSelection(0);
                     }
                 });
 
@@ -108,7 +109,7 @@ public class Update_PlotListActivity extends BaseActivity {
                             @Override
                             public void onResponse(String response, int id) {
                                 Log.d("Response",response);
-                                zha = JsonUtil.parseJson_zha(response);
+                                zha = JsonUtil.parseJson_zha(response,"appmsg");
                                 et_zha.setText(zha);
                             }
                         });
@@ -132,7 +133,7 @@ public class Update_PlotListActivity extends BaseActivity {
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.btn_update:
-                vcparcelno = et_vcparcelno.getText().toString().trim();
+                vcparcelno = sp_vcparcelno.getSelectedItem().toString();
                 vcparceldesc = sp_vcparceldesc.getSelectedItem().toString();
                 dtreadjust = et_dtreadjust.getText().toString();
                 vcreadjustpattern = et_vcreadjustpattern.getText().toString();

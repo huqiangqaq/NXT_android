@@ -105,4 +105,10 @@ public class LoginActivity extends BaseActivity {
 //            Toast.makeText(this, "账号或密码错误", Toast.LENGTH_SHORT).show();
 //        }
     }
+
+    @Override
+    public void onRequestError(Exception e) {
+        dismissLoadingDialog();
+        Toast.makeText(this,"网络连接失败",Toast.LENGTH_SHORT).show();
+    }
 }

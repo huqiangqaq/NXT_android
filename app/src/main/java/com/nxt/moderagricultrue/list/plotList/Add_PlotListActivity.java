@@ -30,9 +30,9 @@ import cn.pedant.SweetAlert.SweetAlertDialog;
 import okhttp3.Call;
 
 public class Add_PlotListActivity extends BaseActivity {
-    private EditText et_vcoperateuser,et_zha,et_vcparcelno,et_dtreadjust,et_vcreadjustpattern,et_vcdisinfect;
+    private EditText et_vcoperateuser,et_zha,et_dtreadjust,et_vcreadjustpattern,et_vcdisinfect;
     private String vcoperatrueser,zha,vcparcelno,vcparceldesc,dtreadjust,vcreadjustpattern,vcdisinfect;
-    private Spinner sp_vcparceldesc;
+    private Spinner sp_vcparceldesc,sp_vcparcelno;
 
     private Button btn_add;
     private ZDataTask mDataTask;
@@ -47,7 +47,7 @@ public class Add_PlotListActivity extends BaseActivity {
     protected void initView() throws UnsupportedEncodingException {
         et_vcoperateuser = (EditText) findViewById(R.id.et_vcoperateuser);
         et_zha = (EditText) findViewById(R.id.et_zha);
-        et_vcparcelno = (EditText) findViewById(R.id.et_vcparcelno);
+        sp_vcparcelno = (Spinner) findViewById(R.id.sp_vcparcelno);
         et_dtreadjust = (EditText) findViewById(R.id.et_dtreadjust);
         et_vcreadjustpattern = (EditText) findViewById(R.id.et_vcreadjustpattern);
         et_vcdisinfect = (EditText) findViewById(R.id.et_vcdisinfect);
@@ -80,6 +80,8 @@ public class Add_PlotListActivity extends BaseActivity {
                         spinner_list_num = JsonUtil.parseJson_spnner(response,"value");
                         sp_vcparceldesc.setAdapter(new ArrayAdapter<String>(Add_PlotListActivity.this,android.R.layout.simple_spinner_dropdown_item,spinner_list));
                         sp_vcparceldesc.setSelection(0);
+                        sp_vcparcelno.setAdapter(new ArrayAdapter<String>(Add_PlotListActivity.this,android.R.layout.simple_spinner_dropdown_item,spinner_list_num));
+                        sp_vcparcelno.setSelection(0);
                     }
                 });
 
@@ -101,7 +103,7 @@ public class Add_PlotListActivity extends BaseActivity {
                             @Override
                             public void onResponse(String response, int id) {
                                 Log.d("Response",response);
-                                zha = JsonUtil.parseJson_zha(response);
+                                zha = JsonUtil.parseJson_zha(response,"appmsg");
                                 et_zha.setText(zha);
                             }
                         });
@@ -121,7 +123,7 @@ public class Add_PlotListActivity extends BaseActivity {
             case R.id.btn_add:
 
                 vcoperatrueser = et_vcoperateuser.getText().toString().trim();
-                vcparcelno = et_vcparcelno.getText().toString().trim();
+                vcparcelno = sp_vcparcelno.getSelectedItem().toString();
                 vcparceldesc = sp_vcparceldesc.getSelectedItem().toString();
                 dtreadjust = et_dtreadjust.getText().toString();
                 vcreadjustpattern = et_vcreadjustpattern.getText().toString();

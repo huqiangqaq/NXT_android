@@ -12,26 +12,26 @@
 
         <include layout="@layout/commen_update"/>
 
-        <LinearLayout
-            android:padding="15dp"
-            android:gravity="center"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <TextView
-                android:layout_gravity="center"
-                android:layout_width="45dp"
-                android:layout_height="wrap_content"
-                android:text="流水号:"
-                android:textSize="18sp"/>
-            <!--流水号-->
-            <EditText
-                android:layout_weight="1"
-                android:background="@drawable/common_shape_edit"
-                android:layout_width="match_parent"
-                android:layout_height="35dp"
-                android:id="@+id/id_" />
-        </LinearLayout>
+        <!--<LinearLayout-->
+            <!--android:padding="15dp"-->
+            <!--android:gravity="center"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:orientation="horizontal">-->
+            <!--<TextView-->
+                <!--android:layout_gravity="center"-->
+                <!--android:layout_width="45dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="流水号:"-->
+                <!--android:textSize="18sp"/>-->
+            <!--&lt;!&ndash;流水号&ndash;&gt;-->
+            <!--<EditText-->
+                <!--android:layout_weight="1"-->
+                <!--android:background="@drawable/common_shape_edit"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="35dp"-->
+                <!--android:id="@+id/id_" />-->
+        <!--</LinearLayout>-->
         <LinearLayout
             android:padding="15dp"
             android:gravity="center"
@@ -50,7 +50,7 @@
                 android:background="@drawable/common_shape_edit"
                 android:layout_width="match_parent"
                 android:layout_height="35dp"
-                android:id="@+id/name" />
+                android:id="@+id/et_name" />
         </LinearLayout>
         <LinearLayout
             android:padding="15dp"
@@ -70,7 +70,7 @@
                 android:background="@drawable/common_shape_edit"
                 android:layout_width="match_parent"
                 android:layout_height="35dp"
-                android:id="@+id/sex" />
+                android:id="@+id/et_sex" />
         </LinearLayout>
         <LinearLayout
             android:padding="15dp"
@@ -91,7 +91,7 @@
                 android:background="@drawable/common_shape_edit"
                 android:layout_width="match_parent"
                 android:layout_height="35dp"
-                android:id="@+id/birthday" />
+                android:id="@+id/et_birthday" />
         </LinearLayout>
         <LinearLayout
             android:padding="15dp"
@@ -111,7 +111,7 @@
                 android:background="@drawable/common_shape_edit"
                 android:layout_width="match_parent"
                 android:layout_height="35dp"
-                android:id="@+id/filed1" />
+                android:id="@+id/et_filed1" />
         </LinearLayout>
         <LinearLayout
             android:padding="15dp"
@@ -131,7 +131,7 @@
                 android:background="@drawable/common_shape_edit"
                 android:layout_width="match_parent"
                 android:layout_height="35dp"
-                android:id="@+id/filed2" />
+                android:id="@+id/et_filed2" />
         </LinearLayout>
         <LinearLayout
             android:padding="15dp"
@@ -151,7 +151,7 @@
                 android:background="@drawable/common_shape_edit"
                 android:layout_width="match_parent"
                 android:layout_height="35dp"
-                android:id="@+id/filed3" />
+                android:id="@+id/et_filed3" />
         </LinearLayout>
 
 
@@ -221,7 +221,7 @@
         <!--android:id="@+id/vcinstoreman" />-->
         <!--</LinearLayout>-->
         <Button
-            android:id="@+id/btn_add"
+            android:id="@+id/btn_update"
             android:layout_width="280dp"
             android:layout_height="45dp"
             android:layout_gravity="center_horizontal"

@@ -25,12 +25,13 @@
                 android:text="名称:"
                 android:textSize="18sp"/>
             <!--名称-->
-            <EditText
+            <Spinner
                 android:layout_weight="1"
                 android:background="@drawable/common_shape_edit"
                 android:layout_width="match_parent"
                 android:layout_height="35dp"
-                android:id="@+id/vcparceldesc" />
+                android:id="@+id/sp_vcparceldesc"
+                android:spinnerMode="dropdown"/>
         </LinearLayout>
         <LinearLayout
             android:padding="15dp"
@@ -50,7 +51,7 @@
                 android:background="@drawable/common_shape_edit"
                 android:layout_width="match_parent"
                 android:layout_height="35dp"
-                android:id="@+id/vccutsno" />
+                android:id="@+id/et_zha" />
         </LinearLayout>
         <LinearLayout
             android:padding="15dp"
@@ -70,7 +71,7 @@
                 android:background="@drawable/common_shape_edit"
                 android:layout_width="match_parent"
                 android:layout_height="35dp"
-                android:id="@+id/dtrecoverydate" />
+                android:id="@+id/et_dtrecoverydate" />
         </LinearLayout>
         <LinearLayout
             android:padding="15dp"
@@ -91,7 +92,7 @@
                 android:background="@drawable/common_shape_edit"
                 android:layout_width="match_parent"
                 android:layout_height="35dp"
-                android:id="@+id/vcrecoveryman" />
+                android:id="@+id/et_vcrecoveryman" />
         </LinearLayout>
         <LinearLayout
             android:padding="15dp"
@@ -111,7 +112,7 @@
                 android:background="@drawable/common_shape_edit"
                 android:layout_width="match_parent"
                 android:layout_height="35dp"
-                android:id="@+id/vcmaturity" />
+                android:id="@+id/et_vcmaturity" />
         </LinearLayout>
         <LinearLayout
             android:padding="15dp"
@@ -131,7 +132,7 @@
                 android:background="@drawable/common_shape_edit"
                 android:layout_width="match_parent"
                 android:layout_height="35dp"
-                android:id="@+id/frecovery" />
+                android:id="@+id/et_frecovery" />
         </LinearLayout>
 
 
@@ -200,7 +201,7 @@
         <!--android:id="@+id/vcinstoreman" />-->
         <!--</LinearLayout>-->
         <Button
-            android:id="@+id/btn_add"
+            android:id="@+id/btn_update"
             android:layout_width="280dp"
             android:layout_height="45dp"
             android:layout_gravity="center_horizontal"

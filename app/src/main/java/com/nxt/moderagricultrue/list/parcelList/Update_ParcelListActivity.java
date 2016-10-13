@@ -4,6 +4,7 @@ import android.graphics.Color;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -34,7 +35,7 @@ public class Update_ParcelListActivity extends BaseActivity {
             et_vcmanager, et_istatus, et_fgisx, et_fgisy;
     private String  vcareano, vcparceldesc, fparcelarea, vcpurpose, fplantarea,
             vcmanager, istauss, fgisx, fgisy;
-    private Spinner sp_vcareano;
+    private Spinner sp_desc;
     private Button btn_update;
     private ZDataTask mDataTask;
     private SweetAlertDialog pDialog;
@@ -42,10 +43,10 @@ public class Update_ParcelListActivity extends BaseActivity {
     private Parcel vcrecno;
     //下拉框
     private List<String> spinner_list = new ArrayList<>();
-
+    private List<String> spinneer_list_desc = new ArrayList<>();
     @Override
     protected void initView() throws UnsupportedEncodingException {
-        sp_vcareano = (Spinner) findViewById(R.id.sp_vcareano);
+        sp_desc = (Spinner) findViewById(R.id.sp_desc);
         et_vcparceldesc = (EditText) findViewById(R.id.et_vcparceldesc);
         et_fparcelarea = (EditText) findViewById(R.id.et_fparcelarea);
         et_vcpurpose = (EditText) findViewById(R.id.et_vcpurpose);
@@ -66,7 +67,7 @@ public class Update_ParcelListActivity extends BaseActivity {
         mDataTask = MyApplication.getInstance().getZDataTask();
         vcrecno= (Parcel) getIntent().getSerializableExtra(Constants.VCRECNO);
 
-        et_vcparceldesc.setText(vcrecno.getVcareanodesc());
+        et_vcparceldesc.setText(vcrecno.getVcparceldesc());
         et_fparcelarea.setText(vcrecno.getFparcelarea()+"");
         et_vcpurpose.setText(vcrecno.getVcpurpose());
         et_fplantarea.setText(vcrecno.getFplantarea()+"");
@@ -87,10 +88,23 @@ public class Update_ParcelListActivity extends BaseActivity {
                     @Override
                     public void onResponse(String response, int id) {
                         spinner_list = JsonUtil.parseJson_spnner(response,"vcareano");
-                        sp_vcareano.setAdapter(new ArrayAdapter<String>(Update_ParcelListActivity.this, android.R.layout.simple_spinner_dropdown_item, spinner_list));
-                        sp_vcareano.setSelection(0);
+                        spinneer_list_desc = JsonUtil.parseJson_spnner(response,"vcareadesc");
+                        sp_desc.setAdapter(new ArrayAdapter<String>(Update_ParcelListActivity.this, android.R.layout.simple_spinner_dropdown_item, spinneer_list_desc));
+                        sp_desc.setSelection(0);
                     }
                 });
+
+        sp_desc.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                vcareano = spinner_list.get(position);
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
 
     }
 
@@ -98,7 +112,6 @@ public class Update_ParcelListActivity extends BaseActivity {
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.btn_update:
-                vcareano = sp_vcareano.getSelectedItem().toString();
                 vcparceldesc = et_vcparceldesc.getText().toString().trim();
                 fparcelarea = et_fparcelarea.getText().toString().trim();
                 vcpurpose = et_vcpurpose.getText().toString().trim();

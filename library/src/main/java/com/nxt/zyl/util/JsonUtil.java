@@ -39,10 +39,10 @@ public class JsonUtil {
         return list;
     }
 
-    public static String parseJson_zha(String json){
+    public static String parseJson_zha(String json,String tag){
         try {
             JSONObject object = new JSONObject(json);
-            return object.getString("appmsg");
+            return object.getString(tag);
         } catch (JSONException e) {
             e.printStackTrace();
         }

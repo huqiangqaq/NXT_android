@@ -2,7 +2,6 @@ package com.nxt.moderagricultrue.fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.provider.DocumentsContract;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.util.Log;
@@ -17,7 +16,6 @@ import com.nxt.moderagricultrue.R;
 import com.nxt.moderagricultrue.Widget.MyGridAdapter;
 import com.nxt.moderagricultrue.Widget.MyGridView;
 import com.nxt.moderagricultrue.domain.LoginReturn;
-import com.nxt.moderagricultrue.domain.Test;
 import com.nxt.moderagricultrue.list.AreaListActivity;
 import com.nxt.moderagricultrue.list.DiseasedListActivity;
 import com.nxt.moderagricultrue.list.FertilizeListActivity;

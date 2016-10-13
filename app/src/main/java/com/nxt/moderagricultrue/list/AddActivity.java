@@ -116,12 +116,11 @@ public class AddActivity extends BaseActivity {
         Log.d("UPDATE",string);
         if (JsonUtil.PareJson(string)){
             new SweetAlertDialog(AddActivity.this, SweetAlertDialog.SUCCESS_TYPE)
-                    .setTitleText("Good job!")
-                    .setContentText("修改成功")
+                    .setConfirmText("添加成功")
                     .show();
         }else {
             new SweetAlertDialog(AddActivity.this,SweetAlertDialog.ERROR_TYPE)
-                    .setTitleText("修改失败")
+                    .setConfirmText("添加失败")
                     .show();
         }
     }

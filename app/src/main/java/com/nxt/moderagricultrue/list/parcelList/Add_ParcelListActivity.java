@@ -5,6 +5,7 @@ import android.support.v7.widget.AppCompatSpinner;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -35,7 +36,7 @@ public class Add_ParcelListActivity extends BaseActivity {
                 et_vcmanager,et_istatus,et_fgisx,et_fgisy;
     private String vcoperateuser,vcareano,vcparceldesc,fparcelarea,vcpurpose,fplantarea,
                     vcmanager,istauss,fgisx,fgisy;
-    private Spinner sp_vcareano;
+    private Spinner sp_desc;
     private Button btn_add;
     private ZDataTask mDataTask;
     private SweetAlertDialog pDialog;
@@ -43,11 +44,13 @@ public class Add_ParcelListActivity extends BaseActivity {
 
     //下拉框
     private List<String> spinner_list = new ArrayList<>();
+    private List<String> spinner_list_desc = new ArrayList<>();
+
 
     @Override
     protected void initView() throws UnsupportedEncodingException {
         et_et_vcoperateuser = (EditText) findViewById(R.id.et_vcoperateuser);
-        sp_vcareano = (Spinner) findViewById(R.id.sp_vcareano);
+        sp_desc = (Spinner) findViewById(R.id.sp_desc);
         et_vcparceldesc = (EditText) findViewById(R.id.et_vcparceldesc);
         et_fparcelarea = (EditText) findViewById(R.id.et_fparcelarea);
         et_vcpurpose = (EditText) findViewById(R.id.et_vcpurpose);
@@ -80,10 +83,22 @@ public class Add_ParcelListActivity extends BaseActivity {
                     @Override
                     public void onResponse(String response, int id) {
                         spinner_list = JsonUtil.parseJson_spnner(response,"vcareano");
-                        sp_vcareano.setAdapter(new ArrayAdapter<String>(Add_ParcelListActivity.this,android.R.layout.simple_spinner_dropdown_item,spinner_list));
-                        sp_vcareano.setSelection(0);
+                        spinner_list_desc = JsonUtil.parseJson_spnner(response,"vcareadesc");
+                        sp_desc.setAdapter(new ArrayAdapter<String>(Add_ParcelListActivity.this,android.R.layout.simple_spinner_dropdown_item,spinner_list_desc));
+                        sp_desc.setSelection(0);
                     }
                 });
+        sp_desc.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                vcareano = spinner_list.get(position);
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
 
     }
 
@@ -92,7 +107,6 @@ public class Add_ParcelListActivity extends BaseActivity {
         switch (v.getId()){
             case R.id.btn_add:
                 vcoperateuser = et_et_vcoperateuser.getText().toString().trim();
-                vcareano = sp_vcareano.getSelectedItem().toString();
                 vcparceldesc = et_vcparceldesc.getText().toString().trim();
                 fparcelarea = et_fparcelarea.getText().toString().trim();
                 vcpurpose = et_vcpurpose.getText().toString().trim();

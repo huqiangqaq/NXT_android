@@ -12,7 +12,7 @@ public class Constants {
     public static final String TEST_URL = "http://192.168.10.8:8081/lp";
     public static final String BASE_URL="http://zs.yxag.gov.cn/lp";//BASE
     public static final String LOGIN_URL=TEST_URL+"/doLoginApp.jhtml?account_=%s&password_=%s";
-    public static final String URL_01=BASE_URL+"/datum/buy/listBuyPage.jhtml?limit=10&start=1&page=%s";//购进
+    public static final String URL_01=BASE_URL+"/datum/buy/listBuyPage.jhtml?limit=%s&start=1&page=%s";//购进
     public static final String URL_02=BASE_URL+"/datum/out/listOutPage.jhtml?limit=10&start=1&page=%s";
     public static final String URL_03=BASE_URL+"/area/findByPage.jhtml?limit=10&start=1&page=%s";
     public static final String URL_04=BASE_URL+"/parcel/findByPage.jhtml?limit=100&start=1&page=%s";

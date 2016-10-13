@@ -35,14 +35,20 @@
         android:theme="@android:style/Theme.Black.NoTitleBar"
         tools:replace="android:icon,android:theme,android:label">
         <activity android:name=".LoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
             android:name=".MainActivity"
             android:theme="@style/AppTheme" />
         <activity
             android:name=".list.SwipeListActivity"
-            android:theme="@style/AppTheme" />
+            android:theme="@style/AppTheme">
+
+        </activity>
         <activity
             android:name=".findbyid.BuyPageDetailActivity"
             android:theme="@style/AppTheme" />
@@ -184,11 +190,7 @@
             android:name=".list.UserList.Update_UserListActivity"
             android:theme="@style/AppTheme" />
         <activity android:name=".TestActivity" android:theme="@style/Theme.AppCompat">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
     </application>
 

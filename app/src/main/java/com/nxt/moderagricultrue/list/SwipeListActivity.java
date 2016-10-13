@@ -7,6 +7,7 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.text.TextUtils;
 import android.util.Log;
+import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.AbsListView;
@@ -57,6 +58,8 @@ public class SwipeListActivity extends BaseActivity implements AdapterView.OnIte
     private ZDataTask zDataTask;
     private int lastItem;
     private int page=1;
+    //每页显示的数目
+    private int count = 5;
 
     @Override
     protected int getLayout() {
@@ -71,6 +74,20 @@ public class SwipeListActivity extends BaseActivity implements AdapterView.OnIte
         mlistview= (ListView) findViewById(R.id.listview_common);
         footerview= LayoutInflater.from(this).inflate(R.layout.layout_foot,null);
         swipeRefreshLayout= (SwipeRefreshLayout) findViewById(R.id.swipe_container);
+        swipeRefreshLayout.setProgressBackgroundColorSchemeResource(android.R.color.white);
+        swipeRefreshLayout.setColorSchemeResources(android.R.color.holo_blue_light,
+                android.R.color.holo_red_light,android.R.color.holo_orange_light,
+                android.R.color.holo_green_light);
+//        swipeRefreshLayout.setProgressViewOffset(false, 0, (int) TypedValue
+//                .applyDimension(TypedValue.COMPLEX_UNIT_DIP, 24, getResources()
+//                        .getDisplayMetrics()));
+        swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                zDataTask.get(String.format(Constants.URL_01,count,page),null,null,SwipeListActivity.this);
+
+            }
+        });
         mlistview.setOnItemClickListener(this);
         mlistview.setOnScrollListener(new AbsListView.OnScrollListener() {
             //AbsListView view 这个view对象就是listview
@@ -78,9 +95,10 @@ public class SwipeListActivity extends BaseActivity implements AdapterView.OnIte
             public void onScrollStateChanged(AbsListView view, int scrollState) {
                 if (scrollState == AbsListView.OnScrollListener.SCROLL_STATE_IDLE) {
                     if (view.getLastVisiblePosition() == view.getCount() - 1) {
+
+                        load();
                         mlistview.addFooterView(footerview);
-//                        load();
-                        dismiss();
+//                        dismiss();
                     }
                 }
             }
@@ -189,6 +207,8 @@ public class SwipeListActivity extends BaseActivity implements AdapterView.OnIte
                 page = 1;
             } else {
                 page++;
+                count+=5;
+
             }
             getData();
             super.handleMessage(msg);
@@ -200,9 +220,9 @@ public class SwipeListActivity extends BaseActivity implements AdapterView.OnIte
             Toast.makeText(this, "网络不可用", Toast.LENGTH_SHORT).show();
             return;
         }else {
-            String s = String.format(Constants.URL_01,page);
+            String s = String.format(Constants.URL_01,count,page);
             Log.d("SwipeListActivity",s);
-            zDataTask.get(String.format(Constants.URL_01,page),null,null,this);
+            zDataTask.get(String.format(Constants.URL_01,count,page),null,null,this);
         }
     }
 
@@ -215,6 +235,7 @@ public class SwipeListActivity extends BaseActivity implements AdapterView.OnIte
             }
         });
     }
+
 
     public void onLeftClick(View view) {
         onBackPressed();
@@ -251,9 +272,11 @@ public class SwipeListActivity extends BaseActivity implements AdapterView.OnIte
                     List<BuyPage>  addList = new Gson().fromJson(s, new TypeToken<List<BuyPage>>() {
                     }.getType());
                     if(addList.size()>0) {
+                        buyPageList.clear();
                         buyPageList.addAll(addList);
+                        Log.d("TAG",buyPageList.size()+"");
                         mBuyPageAdapter.notifyDataSetChanged();
-                    }else{
+                    }else {
                         ZToastUtils.showShort(SwipeListActivity.this,"数据已加载完毕");
                     }
                 } catch (Exception e) {

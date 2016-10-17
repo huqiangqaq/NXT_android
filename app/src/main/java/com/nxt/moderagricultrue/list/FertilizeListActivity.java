@@ -58,6 +58,8 @@ public class FertilizeListActivity extends BaseActivity implements AdapterView.O
     private ZDataTask zDataTask;
     private int lastItem;
     private int page=1;
+    //每页显示的数目
+    private int count = 10;
 
     @Override
     protected int getLayout() {
@@ -72,6 +74,20 @@ public class FertilizeListActivity extends BaseActivity implements AdapterView.O
         mlistview= (ListView) findViewById(R.id.listview_common);
         footerview= LayoutInflater.from(this).inflate(R.layout.layout_foot,null);
         swipeRefreshLayout= (SwipeRefreshLayout) findViewById(R.id.swipe_container);
+        swipeRefreshLayout.setProgressBackgroundColorSchemeResource(android.R.color.white);
+        swipeRefreshLayout.setColorSchemeResources(android.R.color.holo_blue_light,
+                android.R.color.holo_red_light,android.R.color.holo_orange_light,
+                android.R.color.holo_green_light);
+//        swipeRefreshLayout.setProgressViewOffset(false, 0, (int) TypedValue
+//                .applyDimension(TypedValue.COMPLEX_UNIT_DIP, 24, getResources()
+//                        .getDisplayMetrics()));
+        swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                zDataTask.get(String.format(Constants.URL_06,count,page),null,null,FertilizeListActivity.this);
+
+            }
+        });
         mlistview.setOnItemClickListener(this);
         mlistview.setOnScrollListener(new AbsListView.OnScrollListener() {
             //AbsListView view 这个view对象就是listview
@@ -80,8 +96,8 @@ public class FertilizeListActivity extends BaseActivity implements AdapterView.O
                 if (scrollState == AbsListView.OnScrollListener.SCROLL_STATE_IDLE) {
                     if (view.getLastVisiblePosition() == view.getCount() - 1) {
                         mlistview.addFooterView(footerview);
-//                        load();
-                        dismiss();
+                        load();
+//                        dismiss();
                     }
                 }
             }
@@ -128,22 +144,21 @@ public class FertilizeListActivity extends BaseActivity implements AdapterView.O
                 String s="1&vcparceldes="+prc;
                 Log.e(TAG,s);
                 if(prc !=null){
-                    zDataTask.get(String.format(Constants.URL_06,s),null,null,this);
-                    Log.e(TAG,String.format(Constants.URL_06,s));
+                    zDataTask.get(String.format(Constants.URL_06,count,s),null,null,this);
+                    Log.e(TAG,String.format(Constants.URL_06,count,s));
                 }
                 String buy_start=et_02.getText().toString().trim();
                 String buy_end=et_03.getText().toString().trim();
                 String buy="1&startDate="+buy_start+"endDate="+buy_end;
                 if(!TextUtils.isEmpty(buy_start)&&!TextUtils.isEmpty(buy_end))
                 {
-                    zDataTask.get(String.format(Constants.URL_06,buy),null,null,this);
-                    Log.e(TAG,String.format(Constants.URL_02,buy));
+                    zDataTask.get(String.format(Constants.URL_06,count,buy),null,null,this);
+                    Log.e(TAG,String.format(Constants.URL_02,count,buy));
                 }
                 lineShaiXuan.setVisibility(View.GONE);
                 break;
             case R.id.fab:
                 startActivity(new Intent(this,Add_FertilizeListActivity.class));
-                ZToastUtils.showShort(this,"点击这里新增");
                 break;
         }
     }
@@ -179,6 +194,7 @@ public class FertilizeListActivity extends BaseActivity implements AdapterView.O
             if (msg.what == 0) {
                 page = 1;
             } else {
+                count+=5;
                 page++;
             }
             getData();
@@ -191,7 +207,7 @@ public class FertilizeListActivity extends BaseActivity implements AdapterView.O
             Toast.makeText(this, "网络不可用", Toast.LENGTH_SHORT).show();
             return;
         }else {
-            zDataTask.get(String.format(Constants.URL_06,page),null,null,this);
+            zDataTask.get(String.format(Constants.URL_06,count,page),null,null,this);
         }
     }
 
@@ -240,6 +256,7 @@ public class FertilizeListActivity extends BaseActivity implements AdapterView.O
                     List<Fertilize>  addList = new Gson().fromJson(s, new TypeToken<List<Fertilize>>() {
                     }.getType());
                     if(addList.size()>0) {
+                        buyPageList.clear();
                         buyPageList.addAll(addList);
                         mBuyPageAdapter.notifyDataSetChanged();
                     }else{

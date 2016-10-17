@@ -1,6 +1,7 @@
 package com.nxt.moderagricultrue.list;
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.support.design.widget.FloatingActionButton;
@@ -59,6 +60,8 @@ public class AreaListActivity extends BaseActivity implements AdapterView.OnItem
     private ZDataTask zDataTask;
     private int lastItem;
     private int page=1;
+    //每页显示的数目
+    private int count = 10;
 
     @Override
     protected int getLayout() {
@@ -73,6 +76,20 @@ public class AreaListActivity extends BaseActivity implements AdapterView.OnItem
         mlistview= (ListView) findViewById(R.id.listview_common);
         footerview= LayoutInflater.from(this).inflate(R.layout.layout_foot,null);
         swipeRefreshLayout= (SwipeRefreshLayout) findViewById(R.id.swipe_container);
+        swipeRefreshLayout.setProgressBackgroundColorSchemeResource(android.R.color.white);
+        swipeRefreshLayout.setColorSchemeResources(android.R.color.holo_blue_light,
+                android.R.color.holo_red_light,android.R.color.holo_orange_light,
+                android.R.color.holo_green_light);
+//        swipeRefreshLayout.setProgressViewOffset(false, 0, (int) TypedValue
+//                .applyDimension(TypedValue.COMPLEX_UNIT_DIP, 24, getResources()
+//                        .getDisplayMetrics()));
+        swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                zDataTask.get(String.format(Constants.URL_03,count,page),null,null,AreaListActivity.this);
+
+            }
+        });
         mlistview.setOnItemClickListener(this);
         mlistview.setOnScrollListener(new AbsListView.OnScrollListener() {
             //AbsListView view 这个view对象就是listview
@@ -81,8 +98,8 @@ public class AreaListActivity extends BaseActivity implements AdapterView.OnItem
                 if (scrollState == AbsListView.OnScrollListener.SCROLL_STATE_IDLE) {
                     if (view.getLastVisiblePosition() == view.getCount() - 1) {
                         mlistview.addFooterView(footerview);
-//                        load();
-                        dismiss();
+                        load();
+//                        dismiss();
                     }
                 }
             }
@@ -129,8 +146,8 @@ public class AreaListActivity extends BaseActivity implements AdapterView.OnItem
                 String s="1&vcareadesc="+prc;
                 Log.e(TAG,s);
                 if(prc !=null){
-                    zDataTask.get(String.format(Constants.URL_03,s),null,null,this);
-                    Log.e(TAG,String.format(Constants.URL_03,s));
+                    zDataTask.get(String.format(Constants.URL_03,page,s),null,null,this);
+                    Log.e(TAG,String.format(Constants.URL_03,page,s));
                 }
                 lineShaiXuan.setVisibility(View.GONE);
                 break;
@@ -171,6 +188,7 @@ public class AreaListActivity extends BaseActivity implements AdapterView.OnItem
             if (msg.what == 0) {
                 page = 1;
             } else {
+                count+=5;
                 page++;
             }
             getData();
@@ -183,7 +201,7 @@ public class AreaListActivity extends BaseActivity implements AdapterView.OnItem
             Toast.makeText(this, "网络不可用", Toast.LENGTH_SHORT).show();
             return;
         }else {
-            zDataTask.get(String.format(Constants.URL_03,page),null,null,this);
+            zDataTask.get(String.format(Constants.URL_03,count,page),null,null,this);
         }
     }
 
@@ -232,6 +250,7 @@ public class AreaListActivity extends BaseActivity implements AdapterView.OnItem
                     List<Area>  addList = new Gson().fromJson(s, new TypeToken<List<Area>>() {
                     }.getType());
                     if(addList.size()>0) {
+                        buyPageList.clear();
                         buyPageList.addAll(addList);
                         mBuyPageAdapter.notifyDataSetChanged();
                     }else{

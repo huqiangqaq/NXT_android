@@ -23,8 +23,10 @@ import com.google.gson.reflect.TypeToken;
 import com.nxt.moderagricultrue.BaseActivity;
 import com.nxt.moderagricultrue.ComUtils;
 import com.nxt.moderagricultrue.Constants;
+import com.nxt.moderagricultrue.MainActivity;
 import com.nxt.moderagricultrue.MyApplication;
 import com.nxt.moderagricultrue.R;
+import com.nxt.moderagricultrue.Widget.QQListView;
 import com.nxt.moderagricultrue.adapter.BuyPageAdapter;
 import com.nxt.moderagricultrue.domain.BuyPage;
 import com.nxt.moderagricultrue.findbyid.BuyPageDetailActivity;
@@ -59,7 +61,7 @@ public class SwipeListActivity extends BaseActivity implements AdapterView.OnIte
     private int lastItem;
     private int page=1;
     //每页显示的数目
-    private int count = 5;
+    private int count = 10;
 
     @Override
     protected int getLayout() {
@@ -95,9 +97,9 @@ public class SwipeListActivity extends BaseActivity implements AdapterView.OnIte
             public void onScrollStateChanged(AbsListView view, int scrollState) {
                 if (scrollState == AbsListView.OnScrollListener.SCROLL_STATE_IDLE) {
                     if (view.getLastVisiblePosition() == view.getCount() - 1) {
-
-                        load();
                         mlistview.addFooterView(footerview);
+                        load();
+
 //                        dismiss();
                     }
                 }
@@ -146,31 +148,30 @@ public class SwipeListActivity extends BaseActivity implements AdapterView.OnIte
                 String s="1&vcmadecomp="+prc;
                 Log.e(TAG,s);
                 if(prc !=null){
-                    String ss = String.format(Constants.URL_01,s);
-                    zDataTask.get(String.format(Constants.URL_01,s),null,null,this);
-                    Log.e(TAG,String.format(Constants.URL_01,s));
+                    String ss = String.format(Constants.URL_01,count,s);
+                    zDataTask.get(String.format(Constants.URL_01,count,s),null,null,this);
+                    Log.e(TAG,String.format(Constants.URL_01,count,s));
                 }
                 String buy_start=et_02.getText().toString().trim();
                 String buy_end=et_03.getText().toString().trim();
                 String buy="1&startDate="+buy_start+"endDate="+buy_end;
                 if(!TextUtils.isEmpty(buy_start)&&!TextUtils.isEmpty(buy_end))
                 {
-                    zDataTask.get(String.format(Constants.URL_01,buy),null,null,this);
-                    Log.e(TAG,String.format(Constants.URL_01,buy));
+                    zDataTask.get(String.format(Constants.URL_01,count,buy),null,null,this);
+                    Log.e(TAG,String.format(Constants.URL_01,count,buy));
                 }
                 String in_start=et_04.getText().toString().trim();
                 String in_end=et_05.getText().toString().trim();
                 String in="1&startDate="+buy_start+"endDate="+buy_end;
                 if(!TextUtils.isEmpty(in_start)&&!TextUtils.isEmpty(in_end))
                 {
-                    zDataTask.get(String.format(Constants.URL_01,in),null,null,this);
-                    Log.e(TAG,String.format(Constants.URL_01,in));
+                    zDataTask.get(String.format(Constants.URL_01,count,in),null,null,this);
+                    Log.e(TAG,String.format(Constants.URL_01,count,in));
                 }
                 lineShaiXuan.setVisibility(View.GONE);
                 break;
             case R.id.fab:
                 startActivity(new Intent(this,AddActivity.class));
-                ZToastUtils.showShort(this,"点击这里新增");
                 break;
         }
     }

@@ -62,15 +62,16 @@
                 android:layout_gravity="center"
                 android:layout_width="45dp"
                 android:layout_height="wrap_content"
-                android:text="性别:"
+                android:text="名称:"
                 android:textSize="18sp"/>
-            <!--性别-->
-            <EditText
+            <!--名称-->
+            <Spinner
                 android:layout_weight="1"
                 android:background="@drawable/common_shape_edit"
                 android:layout_width="match_parent"
                 android:layout_height="35dp"
-                android:id="@+id/et_sex" />
+                android:id="@+id/sp_sex"
+                android:spinnerMode="dropdown"/>
         </LinearLayout>
         <LinearLayout
             android:padding="15dp"

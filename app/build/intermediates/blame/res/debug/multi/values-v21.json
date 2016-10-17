@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "E:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v21\\values-v21.xml",
+        "outputFile": "D:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v21\\values-v21.xml",
         "map": [
             {
                 "to": {
@@ -11,7 +11,7 @@
                     "endOffset": 112
                 },
                 "from": {
-                    "file": "E:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\22.2.0\\res\\values-v21\\values-v21.xml",
+                    "file": "D:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\22.2.0\\res\\values-v21\\values-v21.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
@@ -30,7 +30,7 @@
                     "endOffset": 203
                 },
                 "from": {
-                    "file": "E:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
+                    "file": "D:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
                     "position": {
                         "startLine": 2,
                         "startColumn": 4,
@@ -49,7 +49,7 @@
                     "endOffset": 306
                 },
                 "from": {
-                    "file": "E:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
+                    "file": "D:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
                     "position": {
                         "startLine": 3,
                         "startColumn": 4,
@@ -68,7 +68,7 @@
                     "endOffset": 409
                 },
                 "from": {
-                    "file": "E:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
+                    "file": "D:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
@@ -87,7 +87,7 @@
                     "endOffset": 514
                 },
                 "from": {
-                    "file": "E:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
+                    "file": "D:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
                     "position": {
                         "startLine": 5,
                         "startColumn": 4,
@@ -106,7 +106,7 @@
                     "endOffset": 621
                 },
                 "from": {
-                    "file": "E:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
+                    "file": "D:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
                     "position": {
                         "startLine": 6,
                         "startColumn": 4,
@@ -125,7 +125,7 @@
                     "endOffset": 730
                 },
                 "from": {
-                    "file": "E:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
+                    "file": "D:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
                     "position": {
                         "startLine": 7,
                         "startColumn": 4,
@@ -144,7 +144,7 @@
                     "endOffset": 839
                 },
                 "from": {
-                    "file": "E:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
+                    "file": "D:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
                     "position": {
                         "startLine": 8,
                         "startColumn": 4,
@@ -163,7 +163,7 @@
                     "endOffset": 948
                 },
                 "from": {
-                    "file": "E:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
+                    "file": "D:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
                     "position": {
                         "startLine": 9,
                         "startColumn": 4,
@@ -182,7 +182,7 @@
                     "endOffset": 1057
                 },
                 "from": {
-                    "file": "E:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
+                    "file": "D:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
                     "position": {
                         "startLine": 10,
                         "startColumn": 4,
@@ -201,7 +201,7 @@
                     "endOffset": 1166
                 },
                 "from": {
-                    "file": "E:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
+                    "file": "D:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
                     "position": {
                         "startLine": 11,
                         "startColumn": 4,
@@ -220,7 +220,7 @@
                     "endOffset": 1273
                 },
                 "from": {
-                    "file": "E:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
+                    "file": "D:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
                     "position": {
                         "startLine": 12,
                         "startColumn": 4,
@@ -239,7 +239,7 @@
                     "endOffset": 1376
                 },
                 "from": {
-                    "file": "E:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
+                    "file": "D:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
                     "position": {
                         "startLine": 13,
                         "startColumn": 4,
@@ -258,7 +258,7 @@
                     "endOffset": 1495
                 },
                 "from": {
-                    "file": "E:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
+                    "file": "D:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
                     "position": {
                         "startLine": 14,
                         "startColumn": 4,
@@ -278,7 +278,7 @@
                     "endOffset": 1650
                 },
                 "from": {
-                    "file": "E:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
+                    "file": "D:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
                     "position": {
                         "startLine": 15,
                         "startColumn": 4,
@@ -299,7 +299,7 @@
                     "endOffset": 1805
                 },
                 "from": {
-                    "file": "E:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
+                    "file": "D:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
                     "position": {
                         "startLine": 17,
                         "startColumn": 4,
@@ -319,7 +319,7 @@
                     "endOffset": 1910
                 },
                 "from": {
-                    "file": "E:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
+                    "file": "D:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
                     "position": {
                         "startLine": 19,
                         "startColumn": 4,
@@ -338,7 +338,7 @@
                     "endOffset": 2031
                 },
                 "from": {
-                    "file": "E:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
+                    "file": "D:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
                     "position": {
                         "startLine": 20,
                         "startColumn": 4,
@@ -357,7 +357,7 @@
                     "endOffset": 2132
                 },
                 "from": {
-                    "file": "E:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
+                    "file": "D:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
                     "position": {
                         "startLine": 21,
                         "startColumn": 4,
@@ -377,7 +377,7 @@
                     "endOffset": 2279
                 },
                 "from": {
-                    "file": "E:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
+                    "file": "D:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
                     "position": {
                         "startLine": 22,
                         "startColumn": 4,
@@ -398,7 +398,7 @@
                     "endOffset": 2420
                 },
                 "from": {
-                    "file": "E:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
+                    "file": "D:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
                     "position": {
                         "startLine": 24,
                         "startColumn": 4,
@@ -418,7 +418,7 @@
                     "endOffset": 2523
                 },
                 "from": {
-                    "file": "E:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
+                    "file": "D:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
                     "position": {
                         "startLine": 26,
                         "startColumn": 4,
@@ -437,7 +437,7 @@
                     "endOffset": 2642
                 },
                 "from": {
-                    "file": "E:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
+                    "file": "D:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
                     "position": {
                         "startLine": 27,
                         "startColumn": 4,
@@ -456,7 +456,7 @@
                     "endOffset": 2749
                 },
                 "from": {
-                    "file": "E:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
+                    "file": "D:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
                     "position": {
                         "startLine": 28,
                         "startColumn": 4,
@@ -475,7 +475,7 @@
                     "endOffset": 2852
                 },
                 "from": {
-                    "file": "E:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
+                    "file": "D:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
                     "position": {
                         "startLine": 29,
                         "startColumn": 4,
@@ -495,7 +495,7 @@
                     "endOffset": 3007
                 },
                 "from": {
-                    "file": "E:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
+                    "file": "D:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
                     "position": {
                         "startLine": 30,
                         "startColumn": 4,
@@ -516,7 +516,7 @@
                     "endOffset": 3178
                 },
                 "from": {
-                    "file": "E:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
+                    "file": "D:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
                     "position": {
                         "startLine": 32,
                         "startColumn": 4,
@@ -537,7 +537,7 @@
                     "endOffset": 3327
                 },
                 "from": {
-                    "file": "E:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
+                    "file": "D:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
                     "position": {
                         "startLine": 34,
                         "startColumn": 4,
@@ -558,7 +558,7 @@
                     "endOffset": 3492
                 },
                 "from": {
-                    "file": "E:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
+                    "file": "D:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
                     "position": {
                         "startLine": 36,
                         "startColumn": 4,
@@ -579,7 +579,7 @@
                     "endOffset": 3649
                 },
                 "from": {
-                    "file": "E:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
+                    "file": "D:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
                     "position": {
                         "startLine": 38,
                         "startColumn": 4,
@@ -600,7 +600,7 @@
                     "endOffset": 3800
                 },
                 "from": {
-                    "file": "E:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
+                    "file": "D:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
                     "position": {
                         "startLine": 40,
                         "startColumn": 4,
@@ -620,7 +620,7 @@
                     "endOffset": 3919
                 },
                 "from": {
-                    "file": "E:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
+                    "file": "D:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
                     "position": {
                         "startLine": 42,
                         "startColumn": 4,
@@ -640,7 +640,7 @@
                     "endOffset": 4291
                 },
                 "from": {
-                    "file": "E:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
+                    "file": "D:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
                     "position": {
                         "startLine": 43,
                         "startColumn": 4,
@@ -661,7 +661,7 @@
                     "endOffset": 4440
                 },
                 "from": {
-                    "file": "E:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
+                    "file": "D:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
                     "position": {
                         "startLine": 48,
                         "startColumn": 4,
@@ -682,7 +682,7 @@
                     "endOffset": 4589
                 },
                 "from": {
-                    "file": "E:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
+                    "file": "D:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
                     "position": {
                         "startLine": 50,
                         "startColumn": 4,
@@ -702,7 +702,7 @@
                     "endOffset": 4701
                 },
                 "from": {
-                    "file": "E:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
+                    "file": "D:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
                     "position": {
                         "startLine": 52,
                         "startColumn": 4,
@@ -721,7 +721,7 @@
                     "endOffset": 4848
                 },
                 "from": {
-                    "file": "E:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
+                    "file": "D:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
                     "position": {
                         "startLine": 53,
                         "startColumn": 4,
@@ -741,7 +741,7 @@
                     "endOffset": 5001
                 },
                 "from": {
-                    "file": "E:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
+                    "file": "D:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
                     "position": {
                         "startLine": 54,
                         "startColumn": 4,
@@ -762,7 +762,7 @@
                     "endOffset": 5148
                 },
                 "from": {
-                    "file": "E:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
+                    "file": "D:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
                     "position": {
                         "startLine": 56,
                         "startColumn": 4,
@@ -782,7 +782,7 @@
                     "endOffset": 5223
                 },
                 "from": {
-                    "file": "E:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
+                    "file": "D:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
                     "position": {
                         "startLine": 58,
                         "startColumn": 4,
@@ -801,7 +801,7 @@
                     "endOffset": 5312
                 },
                 "from": {
-                    "file": "E:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
+                    "file": "D:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
                     "position": {
                         "startLine": 59,
                         "startColumn": 4,
@@ -820,7 +820,7 @@
                     "endOffset": 5399
                 },
                 "from": {
-                    "file": "E:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
+                    "file": "D:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
                     "position": {
                         "startLine": 60,
                         "startColumn": 4,
@@ -839,7 +839,7 @@
                     "endOffset": 5500
                 },
                 "from": {
-                    "file": "E:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
+                    "file": "D:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
                     "position": {
                         "startLine": 61,
                         "startColumn": 4,
@@ -858,7 +858,7 @@
                     "endOffset": 5603
                 },
                 "from": {
-                    "file": "E:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
+                    "file": "D:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
                     "position": {
                         "startLine": 62,
                         "startColumn": 4,
@@ -878,7 +878,7 @@
                     "endOffset": 8671
                 },
                 "from": {
-                    "file": "E:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
+                    "file": "D:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
                     "position": {
                         "startLine": 63,
                         "startColumn": 4,
@@ -899,7 +899,7 @@
                     "endOffset": 8857
                 },
                 "from": {
-                    "file": "E:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
+                    "file": "D:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
                     "position": {
                         "startLine": 107,
                         "startColumn": 4,
@@ -920,7 +920,7 @@
                     "endOffset": 11937
                 },
                 "from": {
-                    "file": "E:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
+                    "file": "D:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
                     "position": {
                         "startLine": 110,
                         "startColumn": 4,
@@ -941,7 +941,7 @@
                     "endOffset": 12135
                 },
                 "from": {
-                    "file": "E:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
+                    "file": "D:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
                     "position": {
                         "startLine": 154,
                         "startColumn": 4,
@@ -962,7 +962,7 @@
                     "endOffset": 12335
                 },
                 "from": {
-                    "file": "E:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
+                    "file": "D:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
                     "position": {
                         "startLine": 157,
                         "startColumn": 4,
@@ -983,7 +983,7 @@
                     "endOffset": 12458
                 },
                 "from": {
-                    "file": "E:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
+                    "file": "D:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
                     "position": {
                         "startLine": 160,
                         "startColumn": 4,
@@ -1004,7 +1004,7 @@
                     "endOffset": 12581
                 },
                 "from": {
-                    "file": "E:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
+                    "file": "D:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
                     "position": {
                         "startLine": 162,
                         "startColumn": 4,
@@ -1025,7 +1025,7 @@
                     "endOffset": 12694
                 },
                 "from": {
-                    "file": "E:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
+                    "file": "D:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
                     "position": {
                         "startLine": 164,
                         "startColumn": 4,
@@ -1046,7 +1046,7 @@
                     "endOffset": 12877
                 },
                 "from": {
-                    "file": "E:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
+                    "file": "D:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
                     "position": {
                         "startLine": 166,
                         "startColumn": 4,
@@ -1067,7 +1067,7 @@
                     "endOffset": 13008
                 },
                 "from": {
-                    "file": "E:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
+                    "file": "D:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
                     "position": {
                         "startLine": 169,
                         "startColumn": 4,
@@ -1088,7 +1088,7 @@
                     "endOffset": 13209
                 },
                 "from": {
-                    "file": "E:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
+                    "file": "D:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
                     "position": {
                         "startLine": 171,
                         "startColumn": 4,
@@ -1108,7 +1108,7 @@
                     "endOffset": 13298
                 },
                 "from": {
-                    "file": "E:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
+                    "file": "D:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
                     "position": {
                         "startLine": 174,
                         "startColumn": 4,
@@ -1127,7 +1127,7 @@
                     "endOffset": 13409
                 },
                 "from": {
-                    "file": "E:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
+                    "file": "D:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
                     "position": {
                         "startLine": 175,
                         "startColumn": 4,
@@ -1147,7 +1147,7 @@
                     "endOffset": 13642
                 },
                 "from": {
-                    "file": "E:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
+                    "file": "D:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
                     "position": {
                         "startLine": 176,
                         "startColumn": 4,
@@ -1167,7 +1167,7 @@
                     "endOffset": 13743
                 },
                 "from": {
-                    "file": "E:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
+                    "file": "D:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
                     "position": {
                         "startLine": 179,
                         "startColumn": 4,
@@ -1186,7 +1186,7 @@
                     "endOffset": 13838
                 },
                 "from": {
-                    "file": "E:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
+                    "file": "D:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
                     "position": {
                         "startLine": 180,
                         "startColumn": 4,
@@ -1205,7 +1205,7 @@
                     "endOffset": 13961
                 },
                 "from": {
-                    "file": "E:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
+                    "file": "D:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
                     "position": {
                         "startLine": 181,
                         "startColumn": 4,
@@ -1224,7 +1224,7 @@
                     "endOffset": 14090
                 },
                 "from": {
-                    "file": "E:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
+                    "file": "D:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
                     "position": {
                         "startLine": 182,
                         "startColumn": 4,
@@ -1243,7 +1243,7 @@
                     "endOffset": 14207
                 },
                 "from": {
-                    "file": "E:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
+                    "file": "D:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
                     "position": {
                         "startLine": 183,
                         "startColumn": 4,
@@ -1263,7 +1263,7 @@
                     "endOffset": 14384
                 },
                 "from": {
-                    "file": "E:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
+                    "file": "D:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
                     "position": {
                         "startLine": 184,
                         "startColumn": 4,
@@ -1283,7 +1283,7 @@
                     "endOffset": 14483
                 },
                 "from": {
-                    "file": "E:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
+                    "file": "D:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
                     "position": {
                         "startLine": 187,
                         "startColumn": 4,
@@ -1303,7 +1303,7 @@
                     "endOffset": 14618
                 },
                 "from": {
-                    "file": "E:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
+                    "file": "D:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
                     "position": {
                         "startLine": 188,
                         "startColumn": 4,
@@ -1324,7 +1324,7 @@
                     "endOffset": 14761
                 },
                 "from": {
-                    "file": "E:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
+                    "file": "D:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
                     "position": {
                         "startLine": 190,
                         "startColumn": 4,
@@ -1345,7 +1345,7 @@
                     "endOffset": 14896
                 },
                 "from": {
-                    "file": "E:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
+                    "file": "D:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
                     "position": {
                         "startLine": 192,
                         "startColumn": 4,
@@ -1366,7 +1366,7 @@
                     "endOffset": 15015
                 },
                 "from": {
-                    "file": "E:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
+                    "file": "D:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
                     "position": {
                         "startLine": 194,
                         "startColumn": 4,
@@ -1387,7 +1387,7 @@
                     "endOffset": 15216
                 },
                 "from": {
-                    "file": "E:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
+                    "file": "D:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
                     "position": {
                         "startLine": 196,
                         "startColumn": 4,
@@ -1408,7 +1408,7 @@
                     "endOffset": 15335
                 },
                 "from": {
-                    "file": "E:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
+                    "file": "D:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
                     "position": {
                         "startLine": 200,
                         "startColumn": 4,
@@ -1428,7 +1428,7 @@
                     "endOffset": 15428
                 },
                 "from": {
-                    "file": "E:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
+                    "file": "D:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
                     "position": {
                         "startLine": 202,
                         "startColumn": 4,
@@ -1447,7 +1447,7 @@
                     "endOffset": 15539
                 },
                 "from": {
-                    "file": "E:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
+                    "file": "D:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
                     "position": {
                         "startLine": 203,
                         "startColumn": 4,
@@ -1466,7 +1466,7 @@
                     "endOffset": 15595
                 },
                 "from": {
-                    "file": "E:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
+                    "file": "D:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
                     "position": {
                         "startLine": 204,
                         "startColumn": 4,
@@ -1486,7 +1486,7 @@
                     "endOffset": 15702
                 },
                 "from": {
-                    "file": "E:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
+                    "file": "D:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
                     "position": {
                         "startLine": 205,
                         "startColumn": 4,
@@ -1507,7 +1507,7 @@
                     "endOffset": 15897
                 },
                 "from": {
-                    "file": "E:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
+                    "file": "D:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
                     "position": {
                         "startLine": 207,
                         "startColumn": 4,
@@ -1528,7 +1528,7 @@
                     "endOffset": 16008
                 },
                 "from": {
-                    "file": "E:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
+                    "file": "D:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
                     "position": {
                         "startLine": 211,
                         "startColumn": 4,
@@ -1549,7 +1549,7 @@
                     "endOffset": 16141
                 },
                 "from": {
-                    "file": "E:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
+                    "file": "D:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
                     "position": {
                         "startLine": 213,
                         "startColumn": 4,
@@ -1569,7 +1569,7 @@
                     "endOffset": 16236
                 },
                 "from": {
-                    "file": "E:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
+                    "file": "D:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
                     "position": {
                         "startLine": 215,
                         "startColumn": 4,
@@ -1588,7 +1588,7 @@
                     "endOffset": 16327
                 },
                 "from": {
-                    "file": "E:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
+                    "file": "D:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
                     "position": {
                         "startLine": 216,
                         "startColumn": 4,
@@ -1607,7 +1607,7 @@
                     "endOffset": 16418
                 },
                 "from": {
-                    "file": "E:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
+                    "file": "D:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
                     "position": {
                         "startLine": 217,
                         "startColumn": 4,
@@ -1626,7 +1626,7 @@
                     "endOffset": 16535
                 },
                 "from": {
-                    "file": "E:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
+                    "file": "D:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
                     "position": {
                         "startLine": 218,
                         "startColumn": 4,
@@ -1646,7 +1646,7 @@
                     "endOffset": 16674
                 },
                 "from": {
-                    "file": "E:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
+                    "file": "D:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
                     "position": {
                         "startLine": 219,
                         "startColumn": 4,
@@ -1667,7 +1667,7 @@
                     "endOffset": 17187
                 },
                 "from": {
-                    "file": "E:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
+                    "file": "D:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
                     "position": {
                         "startLine": 221,
                         "startColumn": 4,
@@ -1688,7 +1688,7 @@
                     "endOffset": 17712
                 },
                 "from": {
-                    "file": "E:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
+                    "file": "D:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
                     "position": {
                         "startLine": 231,
                         "startColumn": 4,
@@ -1709,7 +1709,7 @@
                     "endOffset": 18392
                 },
                 "from": {
-                    "file": "E:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
+                    "file": "D:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
                     "position": {
                         "startLine": 241,
                         "startColumn": 4,
@@ -1729,7 +1729,7 @@
                     "endOffset": 18449
                 },
                 "from": {
-                    "file": "E:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
+                    "file": "D:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
                     "position": {
                         "startLine": 251,
                         "startColumn": 4,
@@ -1748,7 +1748,7 @@
                     "endOffset": 18507
                 },
                 "from": {
-                    "file": "E:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
+                    "file": "D:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.0\\res\\values-v21\\values-v21.xml",
                     "position": {
                         "startLine": 252,
                         "startColumn": 4,

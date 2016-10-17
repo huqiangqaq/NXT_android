@@ -6,8 +6,10 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.nxt.moderagricultrue.BaseActivity;
@@ -18,6 +20,7 @@ import com.nxt.moderagricultrue.R;
 import com.nxt.moderagricultrue.domain.BuyPage;
 import com.nxt.moderagricultrue.domain.User;
 import com.nxt.moderagricultrue.list.UpdateActivity;
+import com.nxt.moderagricultrue.list.WateringList.Add_WateringListActivity;
 import com.nxt.zyl.data.ZDataTask;
 import com.nxt.zyl.util.JsonUtil;
 
@@ -31,18 +34,20 @@ import static com.nxt.moderagricultrue.R.id.et_vccultivar;
 import static com.nxt.moderagricultrue.R.id.filed3;
 
 public class Update_UserListActivity extends BaseActivity {
-    private EditText et_name, et_sex, et_birthday, et_filed1, et_filed2, et_filed3;
+    private EditText et_name, et_birthday, et_filed1, et_filed2, et_filed3;
     private String name, sex, birthday, filed1, filed2, filed3;
     private Button btn_update;
 
+    private Spinner sp_sex;
     private ZDataTask mDataTask;
     private SweetAlertDialog pDialog;
     private User user;
+    private String[] sexs = {"男","女"};
 
     @Override
     protected void initView() throws UnsupportedEncodingException {
         et_name = (EditText) findViewById(R.id.et_name);
-        et_sex = (EditText) findViewById(R.id.et_sex);
+        sp_sex = (Spinner) findViewById(R.id.sp_sex);
         et_birthday = (EditText) findViewById(R.id.et_birthday);
         et_filed1 = (EditText) findViewById(R.id.et_filed1);
         et_filed2 = (EditText) findViewById(R.id.et_filed2);
@@ -55,14 +60,11 @@ public class Update_UserListActivity extends BaseActivity {
 
     private void initData() {
         mDataTask = MyApplication.getInstance().getZDataTask();
-
+        sp_sex.setAdapter(new ArrayAdapter<String>(Update_UserListActivity.this, android.R.layout.simple_spinner_dropdown_item, sexs));
+        sp_sex.setSelection(0);
         user = (User) getIntent().getSerializableExtra(Constants.VCRECNO);
         et_name.setText(user.getName_());
-        if ("1".equalsIgnoreCase(user.getSex_())) {
-            et_sex.setText("男");
-        } else {
-            et_sex.setText("女");
-        }
+
 
         et_birthday.setText(user.getBirthday_());
         et_filed1.setText(user.getFiled1_());
@@ -81,7 +83,11 @@ public class Update_UserListActivity extends BaseActivity {
         switch (v.getId()) {
             case R.id.btn_update:
                 name = et_name.getText().toString().trim();
-                sex = et_sex.getText().toString().trim();
+                if ("男".equalsIgnoreCase(sp_sex.getSelectedItem().toString())){
+                    sex = "1";
+                }else {
+                    sex = "0";
+                }
                 birthday = et_birthday.getText().toString().trim();
                 filed1 = et_filed1.getText().toString().trim();
                 filed2 = et_filed2.getText().toString().trim();

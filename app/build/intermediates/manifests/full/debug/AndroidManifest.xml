@@ -39,6 +39,11 @@
         android:supportsRtl="true"
         android:theme="@android:style/Theme.Black.NoTitleBar" >
         <activity android:name="com.nxt.moderagricultrue.LoginActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
             android:name="com.nxt.moderagricultrue.MainActivity"
@@ -46,11 +51,6 @@
         <activity
             android:name="com.nxt.moderagricultrue.list.SwipeListActivity"
             android:theme="@style/AppTheme" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name="com.nxt.moderagricultrue.findbyid.BuyPageDetailActivity"

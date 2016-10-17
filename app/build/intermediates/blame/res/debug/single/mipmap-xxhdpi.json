@@ -1,18 +1,18 @@
 [
     {
-        "merged": "E:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi\\icon_username.png",
-        "source": "E:\\Android\\Android Projects\\NXT_android\\app\\src\\main\\res\\mipmap-xxhdpi\\icon_username.png"
+        "merged": "D:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi\\login_bg.png",
+        "source": "D:\\Android\\Android Projects\\NXT_android\\app\\src\\main\\res\\mipmap-xxhdpi\\login_bg.png"
     },
     {
-        "merged": "E:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi\\icon_password.png",
-        "source": "E:\\Android\\Android Projects\\NXT_android\\app\\src\\main\\res\\mipmap-xxhdpi\\icon_password.png"
+        "merged": "D:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi\\icon_password.png",
+        "source": "D:\\Android\\Android Projects\\NXT_android\\app\\src\\main\\res\\mipmap-xxhdpi\\icon_password.png"
     },
     {
-        "merged": "E:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi\\login_bg.png",
-        "source": "E:\\Android\\Android Projects\\NXT_android\\app\\src\\main\\res\\mipmap-xxhdpi\\login_bg.png"
+        "merged": "D:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi\\icon_username.png",
+        "source": "D:\\Android\\Android Projects\\NXT_android\\app\\src\\main\\res\\mipmap-xxhdpi\\icon_username.png"
     },
     {
-        "merged": "E:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi\\ic_launcher.png",
-        "source": "E:\\Android\\Android Projects\\NXT_android\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
+        "merged": "D:\\Android\\Android Projects\\NXT_android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi\\ic_launcher.png",
+        "source": "D:\\Android\\Android Projects\\NXT_android\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
     }
 ]

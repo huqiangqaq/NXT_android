@@ -85,12 +85,12 @@
                 android:text="时间:"
                 android:textSize="18sp"/>
             <!--购买时间-->
-            <EditText
+            <Button
                 android:layout_weight="1"
                 android:background="@drawable/common_shape_edit"
                 android:layout_width="match_parent"
                 android:layout_height="35dp"
-                android:id="@+id/et_dtgrant" />
+                android:id="@+id/btn_time" />
         </LinearLayout>
         <LinearLayout
             android:padding="15dp"

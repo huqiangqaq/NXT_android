@@ -94,11 +94,9 @@ public class DiseasedAdapter extends ZBaseAdapter<Diseased> implements View.OnCl
         switch (v.getId()){
             case R.id.ll_detail:
                 mContext.startActivity(new Intent(mContext, DiseasedDetailActivity.class).putExtra(Constants.VCRECNO,dataList.get(itemPosition)));
-                ZToastUtils.showShort(mContext,"点击这里进入详情页面");
                 break;
             case R.id.ll_update:
                 mContext.startActivity(new Intent(mContext, Update_DiseasedListActivity.class).putExtra(Constants.VCRECNO,dataList.get(itemPosition)));
-                ZToastUtils.showShort(mContext,"点击这里进入修改页面");
                 break;
         }
     }

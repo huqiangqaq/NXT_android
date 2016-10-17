@@ -190,7 +190,6 @@
             android:name=".list.UserList.Update_UserListActivity"
             android:theme="@style/AppTheme" />
         <activity android:name=".TestActivity" android:theme="@style/Theme.AppCompat">
-
         </activity>
     </application>
 

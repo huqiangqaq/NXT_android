@@ -26,6 +26,7 @@ import com.nxt.moderagricultrue.MyApplication;
 import com.nxt.moderagricultrue.R;
 import com.nxt.moderagricultrue.adapter.OutPageAdapter;
 
+import com.nxt.moderagricultrue.domain.BuyPage;
 import com.nxt.moderagricultrue.domain.OutPage;
 import com.nxt.moderagricultrue.findbyid.OutPageDetailActivity;
 import com.nxt.zyl.data.ZDataTask;
@@ -59,6 +60,9 @@ public class OutpageListActivity extends BaseActivity  implements AdapterView.On
     private int lastItem;
     private int page=1;
 
+    //每页显示的数目
+    private int count = 10;
+
     @Override
     protected int getLayout() {
         return R.layout.activity_outpage_list;
@@ -72,6 +76,19 @@ public class OutpageListActivity extends BaseActivity  implements AdapterView.On
         mlistview= (ListView) findViewById(R.id.listview_common);
         footerview= LayoutInflater.from(this).inflate(R.layout.layout_foot,null);
         swipeRefreshLayout= (SwipeRefreshLayout) findViewById(R.id.swipe_container);
+        swipeRefreshLayout= (SwipeRefreshLayout) findViewById(R.id.swipe_container);
+        swipeRefreshLayout.setProgressBackgroundColorSchemeResource(android.R.color.white);
+        swipeRefreshLayout.setColorSchemeResources(android.R.color.holo_blue_light,
+                android.R.color.holo_red_light,android.R.color.holo_orange_light,
+                android.R.color.holo_green_light);
+
+        swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                zDataTask.get(String.format(Constants.URL_02,count,page),null,null,OutpageListActivity.this);
+
+            }
+        });
         mlistview.setOnItemClickListener(this);
         mlistview.setOnScrollListener(new AbsListView.OnScrollListener() {
             //AbsListView view 这个view对象就是listview
@@ -80,8 +97,8 @@ public class OutpageListActivity extends BaseActivity  implements AdapterView.On
                 if (scrollState == AbsListView.OnScrollListener.SCROLL_STATE_IDLE) {
                     if (view.getLastVisiblePosition() == view.getCount() - 1) {
                         mlistview.addFooterView(footerview);
-//                        load();
-                        dismiss();
+                            load();
+//                        dismiss();
                     }
                 }
             }
@@ -129,29 +146,28 @@ public class OutpageListActivity extends BaseActivity  implements AdapterView.On
                 String s="1&vccultivar="+prc;
                 Log.e(TAG,s);
                 if(prc !=null){
-                    zDataTask.get(String.format(Constants.URL_02,s),null,null,this);
-                    Log.e(TAG,String.format(Constants.URL_02,s));
+                    zDataTask.get(String.format(Constants.URL_02,count,s),null,null,this);
+                    Log.e(TAG,String.format(Constants.URL_02,count,s));
                 }
                 String prs=et_04.getText().toString().trim();
                 String ps="1&vcreceiver="+prs;
                 Log.e(TAG,s);
                 if(prc !=null){
-                    zDataTask.get(String.format(Constants.URL_02,ps),null,null,this);
-                    Log.e(TAG,String.format(Constants.URL_02,ps));
+                    zDataTask.get(String.format(Constants.URL_02,count,ps),null,null,this);
+                    Log.e(TAG,String.format(Constants.URL_02,count,ps));
                 }
                 String buy_start=et_02.getText().toString().trim();
                 String buy_end=et_03.getText().toString().trim();
                 String buy="1&startDate="+buy_start+"endDate="+buy_end;
                 if(!TextUtils.isEmpty(buy_start)&&!TextUtils.isEmpty(buy_end))
                 {
-                    zDataTask.get(String.format(Constants.URL_02,buy),null,null,this);
-                    Log.e(TAG,String.format(Constants.URL_02,buy));
+                    zDataTask.get(String.format(Constants.URL_02,count,buy),null,null,this);
+                    Log.e(TAG,String.format(Constants.URL_02,count,buy));
                 }
                 lineShaiXuan.setVisibility(View.GONE);
                 break;
             case R.id.fab:
                 startActivity(new Intent(this,Add_OutPageListActivity.class));
-                ZToastUtils.showShort(this,"点击这里新增");
                 break;
         }
     }
@@ -188,6 +204,7 @@ public class OutpageListActivity extends BaseActivity  implements AdapterView.On
                 page = 1;
             } else {
                 page++;
+                count+=5;
             }
             getData();
             super.handleMessage(msg);
@@ -199,7 +216,7 @@ public class OutpageListActivity extends BaseActivity  implements AdapterView.On
             Toast.makeText(this, "网络不可用", Toast.LENGTH_SHORT).show();
             return;
         }else {
-            zDataTask.get(String.format(Constants.URL_02,page),null,null,this);
+            zDataTask.get(String.format(Constants.URL_02,count,page),null,null,this);
         }
     }
 
@@ -248,6 +265,7 @@ public class OutpageListActivity extends BaseActivity  implements AdapterView.On
                     List<OutPage>  addList = new Gson().fromJson(s, new TypeToken<List<OutPage>>() {
                     }.getType());
                     if(addList.size()>0) {
+                        buyPageList.clear();
                         buyPageList.addAll(addList);
                         mBuyPageAdapter.notifyDataSetChanged();
                     }else{
@@ -275,5 +293,11 @@ public class OutpageListActivity extends BaseActivity  implements AdapterView.On
         OutPage mBuypage=buyPageList.get(i);
         Log.e(TAG,i+"");
         startActivity(new Intent(this, OutPageDetailActivity.class).putExtra(Constants.VCRECNO,mBuypage));
+    }
+
+    @Override
+    public void onBackPressed() {
+        ZToastUtils.hideToast();
+        super.onBackPressed();
     }
 }

@@ -1,5 +1,6 @@
 package com.nxt.moderagricultrue.list.FertilizeLiset;
 
+import android.app.DatePickerDialog;
 import android.graphics.Color;
 import android.text.TextUtils;
 import android.util.Log;
@@ -7,6 +8,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
@@ -24,21 +26,25 @@ import com.zhy.http.okhttp.callback.StringCallback;
 
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 
 import cn.pedant.SweetAlert.SweetAlertDialog;
 import okhttp3.Call;
 
 public class Update_FertilizeListActivity extends BaseActivity {
-    private EditText et_zha,et_dtfertilizedate,et_vcfertilizenum,et_vcfertilizerrate;
+    private EditText et_zha,et_vcfertilizenum,et_vcfertilizerrate;
     private String vcoperatrueser,vcparcelno,vcparceldesc,zha,dtfertilizedate,vcfertilizenum,vcfertilizerrate;
     private Spinner sp_vcparceldesc;
 
-    private Button btn_update;
+    private Button btn_update,btn_time;
     private ZDataTask mDataTask;
     private SweetAlertDialog pDialog;
     private MyApplication application;
     private Fertilize fertilize;
+    private int year,month,day;
 
     //下拉框
     //地块名称
@@ -51,12 +57,13 @@ public class Update_FertilizeListActivity extends BaseActivity {
         et_zha = (EditText) findViewById(R.id.et_zha);
         sp_vcparceldesc = (Spinner) findViewById(R.id.sp_vcparceldesc);
 //        sp_vcparcelno = (Spinner) findViewById(R.id.sp_vcparcelno);
-        et_dtfertilizedate = (EditText) findViewById(R.id.et_dtfertilizedate);
+        btn_time = (Button) findViewById(R.id.btn_time);
         et_vcfertilizenum = (EditText) findViewById(R.id.et_vcfertilizenum);
         et_vcfertilizerrate = (EditText) findViewById(R.id.et_vcfertilizerrate);
 
         btn_update = (Button) findViewById(R.id.btn_update);
         btn_update.setOnClickListener(this);
+        btn_time.setOnClickListener(this);
 
         initData();
     }
@@ -66,7 +73,15 @@ public class Update_FertilizeListActivity extends BaseActivity {
         mDataTask = MyApplication.getInstance().getZDataTask();
         fertilize = (Fertilize) getIntent().getSerializableExtra(Constants.VCRECNO);
 
-        et_dtfertilizedate.setText(fertilize.getDtfertilizedate()+"");
+        //初始化Calendar日历对象
+        Calendar mycalendar = Calendar.getInstance(Locale.CHINA);
+        Date date = new Date();//获取当前日期Date对象
+        mycalendar.setTime(date);////为Calendar对象设置时间为当前日期
+
+        year=mycalendar.get(Calendar.YEAR); //获取Calendar对象中的年
+        month=mycalendar.get(Calendar.MONTH);//获取Calendar对象中的月
+        day=mycalendar.get(Calendar.DAY_OF_MONTH);//获取这个月的第几天
+
         et_vcfertilizenum.setText(fertilize.getVcfertilizenum());
         et_vcfertilizerrate.setText(fertilize.getVcfertilizerrate());
         //获取下拉sp生产区编号
@@ -134,7 +149,6 @@ public class Update_FertilizeListActivity extends BaseActivity {
             case R.id.btn_update:
 
                 vcparceldesc = sp_vcparceldesc.getSelectedItem().toString();
-                dtfertilizedate = et_dtfertilizedate.getText().toString().trim();
                 vcfertilizenum = et_vcfertilizenum.getText().toString().trim();
                 vcfertilizerrate = et_vcfertilizerrate.getText().toString().trim();
 
@@ -158,6 +172,18 @@ public class Update_FertilizeListActivity extends BaseActivity {
                 Log.d("Update",ss);
 
                 mDataTask.get(String.format(Constants.UPDATE_URL_07,fertilize.getVcrecno(),vcparcelno,vcparceldesc,zha,dtfertilizedate,vcfertilizenum,vcfertilizerrate),null,null,this);
+                break;
+            case R.id.btn_time:
+                //创建DatePickerDialog对象
+                DatePickerDialog dpd=new DatePickerDialog(Update_FertilizeListActivity.this, new DatePickerDialog.OnDateSetListener() {
+                    @Override
+                    public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+                        dtfertilizedate = year+"-"+(month+1)+"-"+dayOfMonth;
+                        btn_time.setText(dtfertilizedate);
+                    }
+                }, year, month, day);
+                dpd.show();//显示DatePickerDialog组件
+                break;
         }
     }
 

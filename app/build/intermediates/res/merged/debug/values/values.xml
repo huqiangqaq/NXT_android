@@ -527,7 +527,10 @@
     <string name="abc_shareactionprovider_share_with_application">Share with %s</string>
     <string name="abc_toolbar_collapse_description">Collapse</string>
     <string name="action_settings">Settings</string>
-    <string name="app_name">吉安青原现代农业管委会平台</string>
+    <string name="app_name">Zlibrary</string>
+    <string name="app_name_jjj">京津冀蔬菜安全质量追溯服务平台</string>
+    <string name="app_name_lp">乐平市现代农业管委会平台</string>
+    <string name="app_name_qyq">吉安青原现代农业管委会平台</string>
     <string name="appbar_scrolling_view_behavior" translatable="false">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
     <string name="default_loading">Loading…</string>
     <string name="define_roundedimageview"/>

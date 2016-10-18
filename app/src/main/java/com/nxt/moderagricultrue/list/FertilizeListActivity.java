@@ -43,7 +43,7 @@ import java.util.TimerTask;
  * Created by xpeng on 2016/9/17.
  */
 
-public class FertilizeListActivity extends BaseActivity implements AdapterView.OnItemClickListener{
+public class FertilizeListActivity extends BaseActivity{
     private static final String TAG = "ParcelListActivity";
     private SwipeRefreshLayout swipeRefreshLayout;
     private ListView mlistview;
@@ -88,7 +88,6 @@ public class FertilizeListActivity extends BaseActivity implements AdapterView.O
 
             }
         });
-        mlistview.setOnItemClickListener(this);
         mlistview.setOnScrollListener(new AbsListView.OnScrollListener() {
             //AbsListView view 这个view对象就是listview
             @Override
@@ -153,7 +152,7 @@ public class FertilizeListActivity extends BaseActivity implements AdapterView.O
                 if(!TextUtils.isEmpty(buy_start)&&!TextUtils.isEmpty(buy_end))
                 {
                     zDataTask.get(String.format(Constants.URL_06,count,buy),null,null,this);
-                    Log.e(TAG,String.format(Constants.URL_02,count,buy));
+                    Log.e(TAG,String.format(Constants.URL_06,count,buy));
                 }
                 lineShaiXuan.setVisibility(View.GONE);
                 break;
@@ -279,11 +278,5 @@ public class FertilizeListActivity extends BaseActivity implements AdapterView.O
         return str;
     }
 
-    @Override
-    public void onItemClick(AdapterView<?> view, View view1, int i, long l) {
-        Fertilize mBuypage=buyPageList.get(i);
-        Log.e(TAG,i+"");
-        startActivity(new Intent(this, FertilizeDetailActivity.class).putExtra(Constants.VCRECNO,mBuypage));
-    }
 
 }

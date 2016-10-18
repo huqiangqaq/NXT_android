@@ -45,7 +45,7 @@ import java.util.TimerTask;
  * Created by xpeng on 2016/9/17.
  */
 
-public class AreaListActivity extends BaseActivity implements AdapterView.OnItemClickListener{
+public class AreaListActivity extends BaseActivity{
     private static final String TAG = "SwipeListActivity";
     private SwipeRefreshLayout swipeRefreshLayout;
     private ListView mlistview;
@@ -90,7 +90,6 @@ public class AreaListActivity extends BaseActivity implements AdapterView.OnItem
 
             }
         });
-        mlistview.setOnItemClickListener(this);
         mlistview.setOnScrollListener(new AbsListView.OnScrollListener() {
             //AbsListView view 这个view对象就是listview
             @Override
@@ -273,10 +272,5 @@ public class AreaListActivity extends BaseActivity implements AdapterView.OnItem
         return str;
     }
 
-    @Override
-    public void onItemClick(AdapterView<?> view, View view1, int i, long l) {
-        Area mBuypage=buyPageList.get(i);
-        Log.e(TAG,i+"");
-        startActivity(new Intent(this, AreaDetailActivity.class).putExtra(Constants.VCRECNO,mBuypage));
-    }
+
 }

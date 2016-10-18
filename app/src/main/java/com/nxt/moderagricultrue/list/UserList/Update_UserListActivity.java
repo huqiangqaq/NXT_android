@@ -1,5 +1,6 @@
 package com.nxt.moderagricultrue.list.UserList;
 
+import android.app.DatePickerDialog;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -8,6 +9,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
@@ -25,6 +27,9 @@ import com.nxt.zyl.data.ZDataTask;
 import com.nxt.zyl.util.JsonUtil;
 
 import java.io.UnsupportedEncodingException;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.Locale;
 
 import cn.pedant.SweetAlert.SweetAlertDialog;
 
@@ -34,39 +39,50 @@ import static com.nxt.moderagricultrue.R.id.et_vccultivar;
 import static com.nxt.moderagricultrue.R.id.filed3;
 
 public class Update_UserListActivity extends BaseActivity {
-    private EditText et_name, et_birthday, et_filed1, et_filed2, et_filed3;
+    private EditText et_name, et_filed1, et_filed2, et_filed3;
     private String name, sex, birthday, filed1, filed2, filed3;
-    private Button btn_update;
+    private Button btn_update,btn_birthday;
 
     private Spinner sp_sex;
     private ZDataTask mDataTask;
     private SweetAlertDialog pDialog;
     private User user;
+    private int year,month,day;
     private String[] sexs = {"男","女"};
 
     @Override
     protected void initView() throws UnsupportedEncodingException {
         et_name = (EditText) findViewById(R.id.et_name);
         sp_sex = (Spinner) findViewById(R.id.sp_sex);
-        et_birthday = (EditText) findViewById(R.id.et_birthday);
+        btn_birthday = (Button) findViewById(R.id.btn_birthday);
         et_filed1 = (EditText) findViewById(R.id.et_filed1);
         et_filed2 = (EditText) findViewById(R.id.et_filed2);
         et_filed3 = (EditText) findViewById(R.id.et_filed3);
 
         btn_update = (Button) findViewById(R.id.btn_update);
         btn_update.setOnClickListener(this);
+        btn_birthday.setOnClickListener(this);
         initData();
     }
 
     private void initData() {
         mDataTask = MyApplication.getInstance().getZDataTask();
+
+
+        //初始化Calendar日历对象
+        Calendar mycalendar = Calendar.getInstance(Locale.CHINA);
+        Date date = new Date();//获取当前日期Date对象
+        mycalendar.setTime(date);////为Calendar对象设置时间为当前日期
+
+        year=mycalendar.get(Calendar.YEAR); //获取Calendar对象中的年
+        month=mycalendar.get(Calendar.MONTH);//获取Calendar对象中的月
+        day=mycalendar.get(Calendar.DAY_OF_MONTH);//获取这个月的第几天
         sp_sex.setAdapter(new ArrayAdapter<String>(Update_UserListActivity.this, android.R.layout.simple_spinner_dropdown_item, sexs));
         sp_sex.setSelection(0);
         user = (User) getIntent().getSerializableExtra(Constants.VCRECNO);
         et_name.setText(user.getName_());
 
 
-        et_birthday.setText(user.getBirthday_());
         et_filed1.setText(user.getFiled1_());
         et_filed2.setText(user.getFiled2_());
         et_filed3.setText(user.getFiled3_());
@@ -88,7 +104,6 @@ public class Update_UserListActivity extends BaseActivity {
                 }else {
                     sex = "0";
                 }
-                birthday = et_birthday.getText().toString().trim();
                 filed1 = et_filed1.getText().toString().trim();
                 filed2 = et_filed2.getText().toString().trim();
                 filed3 = et_filed3.getText().toString().trim();
@@ -110,6 +125,17 @@ public class Update_UserListActivity extends BaseActivity {
                 Log.d("Update", ss);
 
                 mDataTask.get(String.format(Constants.UPDATE_URL_12, user.getId_(), name, sex, birthday, filed1, filed2, filed3), null, null, this);
+                break;
+            case R.id.btn_birthday:
+                DatePickerDialog dpd1 = new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
+                    @Override
+                    public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+                        birthday =year+"-"+(month+1)+"-"+dayOfMonth;
+                        btn_birthday.setText(birthday);
+                    }
+                },year,month,day);
+                dpd1.show();
+                break;
         }
     }
 

@@ -98,11 +98,9 @@ public class UserAdapter extends ZBaseAdapter<User> implements View.OnClickListe
         switch (v.getId()){
             case R.id.ll_detail:
                 mContext.startActivity(new Intent(mContext, UserDetailActivity.class).putExtra(Constants.VCRECNO,dataList.get(itemPosition)));
-                ZToastUtils.showShort(mContext,"点击这里进入详情页面");
                 break;
             case R.id.ll_update:
                 mContext.startActivity(new Intent(mContext, Update_UserListActivity.class).putExtra(Constants.VCRECNO,dataList.get(itemPosition)));
-                ZToastUtils.showShort(mContext,"点击这里进入修改页面");
                 break;
         }
     }

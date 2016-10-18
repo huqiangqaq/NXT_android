@@ -1,5 +1,7 @@
 <resources>
-    <string name="app_name">吉安青原现代农业管委会平台</string>
+    <string name="app_name_qyq">吉安青原现代农业管委会平台</string>
+    <string name="app_name_lp">乐平市现代农业管委会平台</string>
+    <string name="app_name_jjj">京津冀蔬菜安全质量追溯服务平台</string>
     <string name="login_login">登入</string>
     <string name="resource_buy">资料购进</string>
     <string name="resource_buy_info">生产资料购进信息</string>

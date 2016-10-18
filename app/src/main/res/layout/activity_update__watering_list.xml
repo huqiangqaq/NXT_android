@@ -47,6 +47,7 @@
                 android:textSize="18sp"/>
             <!--茬次号-->
             <EditText
+                android:editable="false"
                 android:layout_weight="1"
                 android:background="@drawable/common_shape_edit"
                 android:layout_width="match_parent"
@@ -66,12 +67,12 @@
                 android:text="灌溉时间:"
                 android:textSize="18sp"/>
             <!--时间-->
-            <EditText
+            <Button
                 android:layout_weight="1"
                 android:background="@drawable/common_shape_edit"
                 android:layout_width="match_parent"
                 android:layout_height="35dp"
-                android:id="@+id/et_dtirrigatedate" />
+                android:id="@+id/btn_time1" />
         </LinearLayout>
         <LinearLayout
             android:padding="15dp"
@@ -128,12 +129,12 @@
                 android:text="记录时间:"
                 android:textSize="18sp"/>
             <!--记录时间-->
-            <EditText
+            <Button
                 android:layout_weight="1"
                 android:background="@drawable/common_shape_edit"
                 android:layout_width="match_parent"
                 android:layout_height="35dp"
-                android:id="@+id/et_dtoperatedate" />
+                android:id="@+id/btn_time2" />
         </LinearLayout>
 
         <!--<LinearLayout-->

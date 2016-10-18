@@ -1,5 +1,6 @@
 package com.nxt.moderagricultrue.list.RecoveryList;
 
+import android.app.DatePickerDialog;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -9,6 +10,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
@@ -18,6 +20,7 @@ import com.nxt.moderagricultrue.ComUtils;
 import com.nxt.moderagricultrue.Constants;
 import com.nxt.moderagricultrue.MyApplication;
 import com.nxt.moderagricultrue.R;
+import com.nxt.moderagricultrue.list.AddActivity;
 import com.nxt.zyl.data.ZDataTask;
 import com.nxt.zyl.util.JsonUtil;
 import com.zhy.http.okhttp.OkHttpUtils;
@@ -25,20 +28,24 @@ import com.zhy.http.okhttp.callback.StringCallback;
 
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 
 import cn.pedant.SweetAlert.SweetAlertDialog;
 import okhttp3.Call;
 
 public class Add_RecoveryListActivity extends BaseActivity {
-    private EditText et_vcoperateuser,et_zha,et_dtrecoverydate,et_vcrecoveryman,et_vcmaturity,et_frecovery;
+    private EditText et_vcoperateuser,et_zha,et_vcrecoveryman,et_vcmaturity,et_frecovery;
     private String vcoperatrueser,vcparcelno,vcparceldesc,zha,dttrcoverrdate,vcrecoveryman,vcmaturity,frecovery;
     private Spinner sp_vcparceldesc;
 
-    private Button btn_add;
+    private Button btn_add,btn_time;
     private ZDataTask mDataTask;
     private SweetAlertDialog pDialog;
     private MyApplication application;
+    private int year,month,day;
     //下拉框
     //地块名称
     private List<String> spinner_list = new ArrayList<>();
@@ -49,7 +56,7 @@ public class Add_RecoveryListActivity extends BaseActivity {
     protected void initView() throws UnsupportedEncodingException {
         et_vcoperateuser = (EditText) findViewById(R.id.et_vcoperateuser);
         et_zha = (EditText) findViewById(R.id.et_zha);
-        et_dtrecoverydate = (EditText) findViewById(R.id.et_dtrecoverydate);
+        btn_time = (Button) findViewById(R.id.btn_time);
         et_vcrecoveryman = (EditText) findViewById(R.id.et_vcrecoveryman);
         et_vcmaturity = (EditText) findViewById(R.id.et_vcmaturity);
         et_frecovery = (EditText) findViewById(R.id.et_frecovery);
@@ -57,7 +64,7 @@ public class Add_RecoveryListActivity extends BaseActivity {
 
         btn_add = (Button) findViewById(R.id.btn_add);
         btn_add.setOnClickListener(this);
-
+        btn_time.setOnClickListener(this);
         initData();
 
     }
@@ -65,6 +72,15 @@ public class Add_RecoveryListActivity extends BaseActivity {
     private void initData() {
         application = MyApplication.getInstance();
         mDataTask = MyApplication.getInstance().getZDataTask();
+
+        //初始化Calendar日历对象
+        Calendar mycalendar = Calendar.getInstance(Locale.CHINA);
+        Date date = new Date();//获取当前日期Date对象
+        mycalendar.setTime(date);////为Calendar对象设置时间为当前日期
+
+        year=mycalendar.get(Calendar.YEAR); //获取Calendar对象中的年
+        month=mycalendar.get(Calendar.MONTH);//获取Calendar对象中的月
+        day=mycalendar.get(Calendar.DAY_OF_MONTH);//获取这个月的第几天
 
         //获取下拉sp生产区编号
         Log.d("ADD", Constants.SPINNER_URL_02 + application.getOrgID());
@@ -131,7 +147,6 @@ public class Add_RecoveryListActivity extends BaseActivity {
                 //private String vcoperatrueser,vcparcelno,vcparceldesc,zha,dttrcoverrdate,vcrecoveryman,vcmaturity,frecovery;
                 vcoperatrueser = et_vcoperateuser.getText().toString().trim();
                 vcparceldesc = sp_vcparceldesc.getSelectedItem().toString();
-                dttrcoverrdate = et_dtrecoverydate.getText().toString().trim();
                 vcrecoveryman = et_vcrecoveryman.getText().toString().trim();
                 vcmaturity = et_vcmaturity.getText().toString().trim();
                 frecovery = et_frecovery.getText().toString().trim();
@@ -156,6 +171,17 @@ public class Add_RecoveryListActivity extends BaseActivity {
                 Log.d("Update",ss);
 
                 mDataTask.get(String.format(Constants.ADD_URL_10,vcoperatrueser,application.getOrgID(),vcparcelno,vcparceldesc,zha,dttrcoverrdate,vcrecoveryman,vcmaturity,frecovery),null,null,this);
+                break;
+            case R.id.btn_time:
+                DatePickerDialog dpd=new DatePickerDialog(Add_RecoveryListActivity.this, new DatePickerDialog.OnDateSetListener() {
+                    @Override
+                    public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+                        dttrcoverrdate = year+"-"+(month+1)+"-"+dayOfMonth;
+                        btn_time.setText(dttrcoverrdate);
+                    }
+                }, year, month, day);
+                dpd.show();//显示DatePickerDialog组件
+                break;
         }
     }
 

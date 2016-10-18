@@ -1,5 +1,6 @@
 package com.nxt.moderagricultrue.list.WateringList;
 
+import android.app.DatePickerDialog;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -9,6 +10,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
@@ -26,21 +28,25 @@ import com.zhy.http.okhttp.callback.StringCallback;
 
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 
 import cn.pedant.SweetAlert.SweetAlertDialog;
 import okhttp3.Call;
 
 public class Update_WateringListActivity extends BaseActivity {
-    private EditText et_vcoperateuser,et_zha,et_dtirrigatedate,et_fwastewater,et_dtoperatedate;
+    private EditText et_vcoperateuser,et_zha,et_fwastewater;
     private String vcoperatrueser,vcparcelno,vcparceldesc,zha,dtirrigatedate,fwastewater,dtoperatedate;
     private Spinner sp_vcparceldesc;
 
-    private Button btn_update;
+    private Button btn_update,btn_time1,btn_time2;
     private ZDataTask mDataTask;
     private SweetAlertDialog pDialog;
     private MyApplication application;
     private Watering watering;
+    private int year,month,day;
 
     //下拉框
     //地块名称
@@ -52,14 +58,16 @@ public class Update_WateringListActivity extends BaseActivity {
     protected void initView() throws UnsupportedEncodingException {
         et_vcoperateuser = (EditText) findViewById(R.id.et_vcoperateuser);
         et_zha = (EditText) findViewById(R.id.et_zha);
-        et_dtirrigatedate = (EditText) findViewById(R.id.et_dtirrigatedate);
+        btn_time1 = (Button) findViewById(R.id.btn_time1);
         et_fwastewater = (EditText) findViewById(R.id.et_fwastewater);
-        et_dtoperatedate = (EditText) findViewById(R.id.et_dtoperatedate);
+        btn_time2 = (Button) findViewById(R.id.btn_time2);
         sp_vcparceldesc = (Spinner) findViewById(R.id.sp_vcparceldesc);
 
 
         btn_update = (Button) findViewById(R.id.btn_update);
         btn_update.setOnClickListener(this);
+        btn_time1.setOnClickListener(this);
+        btn_time2.setOnClickListener(this);
 
         initData();
     }
@@ -68,10 +76,16 @@ public class Update_WateringListActivity extends BaseActivity {
         application = MyApplication.getInstance();
         mDataTask = MyApplication.getInstance().getZDataTask();
         watering = (Watering) getIntent().getSerializableExtra(Constants.VCRECNO);
+        //初始化Calendar日历对象
+        Calendar mycalendar = Calendar.getInstance(Locale.CHINA);
+        Date date = new Date();//获取当前日期Date对象
+        mycalendar.setTime(date);////为Calendar对象设置时间为当前日期
 
-        et_dtirrigatedate.setText(watering.getDtirrigatedate()+"");
+        year=mycalendar.get(Calendar.YEAR); //获取Calendar对象中的年
+        month=mycalendar.get(Calendar.MONTH);//获取Calendar对象中的月
+        day=mycalendar.get(Calendar.DAY_OF_MONTH);//获取这个月的第几天
+
         et_fwastewater.setText(watering.getFwastewater());
-        et_dtoperatedate.setText(watering.getDtirrigatedate());
 
         //获取下拉sp生产区编号
         Log.d("ADD", Constants.SPINNER_URL_02 + application.getOrgID());
@@ -133,9 +147,7 @@ public class Update_WateringListActivity extends BaseActivity {
 
                 vcoperatrueser = et_vcoperateuser.getText().toString().trim();
                 vcparceldesc = sp_vcparceldesc.getSelectedItem().toString();
-                dtirrigatedate = et_dtirrigatedate.getText().toString().trim();
                 fwastewater = et_fwastewater.getText().toString().trim();
-                dtoperatedate = et_dtoperatedate.getText().toString().trim();
 
                 if (Empty(vcoperatrueser,vcparceldesc,zha,dtirrigatedate,fwastewater,dtoperatedate)){
                     Toast.makeText(this, "该信息不能为空", Toast.LENGTH_SHORT).show();
@@ -157,6 +169,26 @@ public class Update_WateringListActivity extends BaseActivity {
                 Log.d("Update",ss);
 
                 mDataTask.get(String.format(Constants.UPDATE_URL_08,application.getOrgID(),vcparcelno,vcparceldesc,zha,dtirrigatedate,fwastewater,vcoperatrueser,dtoperatedate),null,null,this);
+                break;
+            case R.id.btn_time1:
+                DatePickerDialog dpd=new DatePickerDialog(Update_WateringListActivity.this, new DatePickerDialog.OnDateSetListener() {
+                    @Override
+                    public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+                        dtirrigatedate = year+"-"+(month+1)+"-"+dayOfMonth;
+                        btn_time1.setText(dtirrigatedate);
+                    }
+                }, year, month, day);
+                dpd.show();//显示DatePickerDialog组件
+                break;
+            case R.id.btn_time2:
+                DatePickerDialog dpd1=new DatePickerDialog(Update_WateringListActivity.this, new DatePickerDialog.OnDateSetListener() {
+                    @Override
+                    public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+                        dtoperatedate =year+"-"+(month+1)+"-"+dayOfMonth;
+                        btn_time2.setText(dtoperatedate);
+                    }
+                }, year, month, day);
+                dpd1.show();
         }
     }
 

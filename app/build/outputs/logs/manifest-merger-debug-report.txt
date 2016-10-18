@@ -115,7 +115,7 @@ MERGED from [com.android.support:design:22.2.0] D:\Android\Android Projects\NXT_
 MERGED from [cn.pedant.sweetalert:library:1.3] D:\Android\Android Projects\NXT_android\app\build\intermediates\exploded-aar\cn.pedant.sweetalert\library\1.3\AndroidManifest.xml:11:5-20
 MERGED from [com.pnikosis:materialish-progress:1.0] D:\Android\Android Projects\NXT_android\app\build\intermediates\exploded-aar\com.pnikosis\materialish-progress\1.0\AndroidManifest.xml:11:5-15:19
 	android:label
-		ADDED from D:\Android\Android Projects\NXT_android\app\src\main\AndroidManifest.xml:33:9-41
+		ADDED from D:\Android\Android Projects\NXT_android\app\src\main\AndroidManifest.xml:33:9-45
 		REJECTED from [NXT_android:library:unspecified] D:\Android\Android Projects\NXT_android\app\build\intermediates\exploded-aar\NXT_android\library\unspecified\AndroidManifest.xml:13:9-41
 		REJECTED from [com.pnikosis:materialish-progress:1.0] D:\Android\Android Projects\NXT_android\app\build\intermediates\exploded-aar\com.pnikosis\materialish-progress\1.0\AndroidManifest.xml:14:9-41
 	android:supportsRtl

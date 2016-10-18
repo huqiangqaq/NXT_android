@@ -1,5 +1,6 @@
 package com.nxt.moderagricultrue.list.SeedList;
 
+import android.app.DatePickerDialog;
 import android.drm.DrmStore;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
@@ -10,6 +11,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
@@ -20,6 +22,7 @@ import com.nxt.moderagricultrue.Constants;
 import com.nxt.moderagricultrue.MyApplication;
 import com.nxt.moderagricultrue.R;
 import com.nxt.moderagricultrue.domain.BuyPage;
+import com.nxt.moderagricultrue.list.AddActivity;
 import com.nxt.zyl.data.ZDataTask;
 import com.nxt.zyl.util.JsonUtil;
 import com.nxt.zyl.util.ZToastUtils;
@@ -28,22 +31,26 @@ import com.zhy.http.okhttp.callback.StringCallback;
 
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 
 import cn.pedant.SweetAlert.SweetAlertDialog;
 import okhttp3.Call;
 
 public class Add_SeedListActivity extends BaseActivity {
-    private EditText et_vcoperateuser,et_vccutsno,et_vcbreed,et_dtseeddate,et_vcseedpartten,et_vcseeddensity,
-            et_vcfertilize,et_dtfirstirrigate;
+    private EditText et_vcoperateuser,et_vccutsno,et_vcbreed,et_vcseedpartten,et_vcseeddensity,
+            et_vcfertilize;
     private String vcoperateuser,vcparcelno,vcparceldesc,vccutsno,vcbreed,dtseeddate,vcseedpartten,vcseeddensity,
             vcfertilize,dtfirstirrigate;
 
     private Spinner sp_desc;
-    private Button btn_add;
+    private Button btn_add,btn_time1,btn_time2;
     private ZDataTask mDataTask;
     private SweetAlertDialog pDialog;
     private MyApplication application;
+    private int year,month,day;
 
     //下拉框
     //地块名称
@@ -57,20 +64,32 @@ public class Add_SeedListActivity extends BaseActivity {
         sp_desc = (Spinner) findViewById(R.id.sp_vcparceldesc);
         et_vccutsno = (EditText) findViewById(R.id.et_vccutsno);
         et_vcbreed = (EditText) findViewById(R.id.et_vcbreed);
-        et_dtseeddate = (EditText) findViewById(R.id.et_dtseeddate);
+        btn_time1 = (Button) findViewById(R.id.btn_time1);
         et_vcseedpartten = (EditText) findViewById(R.id.et_vcseedpartten);
         et_vcseeddensity = (EditText) findViewById(R.id.et_vcseeddensity);
         et_vcfertilize = (EditText) findViewById(R.id.et_vcfertilize);
-        et_dtfirstirrigate = (EditText) findViewById(R.id.et_dtfirstirrigate);
+        btn_time2 = (Button) findViewById(R.id.btn_time2);
 
         btn_add = (Button) findViewById(R.id.btn_add);
         btn_add.setOnClickListener(this);
+        btn_time1.setOnClickListener(this);
+        btn_time2.setOnClickListener(this);
         initData();
     }
 
     private void initData(){
         application = MyApplication.getInstance();
         mDataTask= MyApplication.getInstance().getZDataTask();
+
+
+        //初始化Calendar日历对象
+        Calendar mycalendar = Calendar.getInstance(Locale.CHINA);
+        Date date = new Date();//获取当前日期Date对象
+        mycalendar.setTime(date);////为Calendar对象设置时间为当前日期
+
+        year=mycalendar.get(Calendar.YEAR); //获取Calendar对象中的年
+        month=mycalendar.get(Calendar.MONTH);//获取Calendar对象中的月
+        day=mycalendar.get(Calendar.DAY_OF_MONTH);//获取这个月的第几天
 
         //获取下拉sp生产区编号
         Log.d("ADD", Constants.SPINNER_URL_02+application.getOrgID());
@@ -151,11 +170,9 @@ public class Add_SeedListActivity extends BaseActivity {
                 vcparceldesc = sp_desc.getSelectedItem().toString();
                 vccutsno = et_vccutsno.getText().toString().trim();
                 vcbreed = et_vcbreed.getText().toString().trim();
-                dtseeddate = et_dtseeddate.getText().toString().trim();
                 vcseedpartten = et_vcseedpartten.getText().toString().trim();
                 vcseeddensity = et_vcseeddensity.getText().toString().trim();
                 vcfertilize = et_vcfertilize.getText().toString().trim();
-                dtfirstirrigate = et_dtfirstirrigate.getText().toString().trim();
 
                 if (Empty(vcoperateuser,vcparceldesc,vccutsno,vcbreed,dtseeddate,vcseedpartten,vcseeddensity,vcfertilize,dtfirstirrigate)){
                     Toast.makeText(this, "该信息不能为空", Toast.LENGTH_SHORT).show();
@@ -176,6 +193,29 @@ public class Add_SeedListActivity extends BaseActivity {
                 Log.d("Update",ss);
 
                 mDataTask.get(String.format(Constants.ADD_URL_06,vcoperateuser,application.getOrgID(),vcparceldesc,vcparcelno,vccutsno,vcbreed,dtseeddate,vcseedpartten,vcseeddensity,vcfertilize,dtfirstirrigate),null,null,this);
+                break;
+            case R.id.btn_time1:
+                //创建DatePickerDialog对象
+                DatePickerDialog dpd=new DatePickerDialog(Add_SeedListActivity.this, new DatePickerDialog.OnDateSetListener() {
+                    @Override
+                    public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+                        dtseeddate = year+"-"+(month+1)+"-"+dayOfMonth;
+                        btn_time1.setText(dtseeddate);
+                    }
+                }, year, month, day);
+                dpd.show();//显示DatePickerDialog组件
+                break;
+            case R.id.btn_time2:
+                DatePickerDialog dpd1=new DatePickerDialog(Add_SeedListActivity.this, new DatePickerDialog.OnDateSetListener() {
+                    @Override
+                    public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+                        dtfirstirrigate =year+"-"+(month+1)+"-"+dayOfMonth;
+                        btn_time2.setText(dtfirstirrigate);
+                    }
+                }, year, month, day);
+                dpd1.show();
+                break;
+
         }
     }
     private boolean Empty(String... msgs) {

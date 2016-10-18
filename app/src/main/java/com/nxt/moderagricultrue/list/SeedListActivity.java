@@ -43,7 +43,7 @@ import java.util.TimerTask;
  * Created by xpeng on 2016/9/17.
  */
 
-public class SeedListActivity extends BaseActivity implements AdapterView.OnItemClickListener{
+public class SeedListActivity extends BaseActivity {
     private static final String TAG = "ParcelListActivity";
     private SwipeRefreshLayout swipeRefreshLayout;
     private ListView mlistview;
@@ -88,7 +88,6 @@ public class SeedListActivity extends BaseActivity implements AdapterView.OnItem
 
             }
         });
-        mlistview.setOnItemClickListener(this);
         mlistview.setOnScrollListener(new AbsListView.OnScrollListener() {
             //AbsListView view 这个view对象就是listview
             @Override
@@ -166,7 +165,6 @@ public class SeedListActivity extends BaseActivity implements AdapterView.OnItem
                 break;
             case R.id.fab:
                 startActivity(new Intent(this,Add_SeedListActivity.class));
-                ZToastUtils.showShort(this,"点击这里新增");
                 break;
         }
     }
@@ -287,10 +285,4 @@ public class SeedListActivity extends BaseActivity implements AdapterView.OnItem
         return str;
     }
 
-    @Override
-    public void onItemClick(AdapterView<?> view, View view1, int i, long l) {
-        Seed mBuypage=buyPageList.get(i);
-        Log.e(TAG,i+"");
-        startActivity(new Intent(this, SeedDetailActivity.class).putExtra(Constants.VCRECNO,mBuypage));
-    }
 }

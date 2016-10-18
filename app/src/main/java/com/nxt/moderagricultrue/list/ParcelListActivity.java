@@ -43,7 +43,7 @@ import java.util.TimerTask;
  * Created by xpeng on 2016/9/17.
  */
 
-public class ParcelListActivity extends BaseActivity implements AdapterView.OnItemClickListener{
+public class ParcelListActivity extends BaseActivity{
     private static final String TAG = "ParcelListActivity";
     private SwipeRefreshLayout swipeRefreshLayout;
     private ListView mlistview;
@@ -88,7 +88,6 @@ public class ParcelListActivity extends BaseActivity implements AdapterView.OnIt
 
             }
         });
-        mlistview.setOnItemClickListener(this);
         mlistview.setOnScrollListener(new AbsListView.OnScrollListener() {
             //AbsListView view 这个view对象就是listview
             @Override
@@ -283,10 +282,4 @@ public class ParcelListActivity extends BaseActivity implements AdapterView.OnIt
         return str;
     }
 
-    @Override
-    public void onItemClick(AdapterView<?> view, View view1, int i, long l) {
-        Parcel mBuypage=buyPageList.get(i);
-        Log.e(TAG,i+"");
-        startActivity(new Intent(this, ParcelDetailActivity.class).putExtra(Constants.VCRECNO,mBuypage));
-    }
 }

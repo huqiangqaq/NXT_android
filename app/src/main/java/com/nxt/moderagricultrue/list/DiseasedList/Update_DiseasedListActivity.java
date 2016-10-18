@@ -1,5 +1,6 @@
 package com.nxt.moderagricultrue.list.DiseasedList;
 
+import android.app.DatePickerDialog;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -8,6 +9,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
@@ -25,21 +27,25 @@ import com.zhy.http.okhttp.callback.StringCallback;
 
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 
 import cn.pedant.SweetAlert.SweetAlertDialog;
 import okhttp3.Call;
 
 public class Update_DiseasedListActivity extends BaseActivity {
-    private EditText et_vcdrug,et_dtpharmacydate,et_dtpharmacynum,et_dtpharmacypatten;
+    private EditText et_vcdrug,et_dtpharmacynum,et_dtpharmacypatten;
     private String vcparceldesc,vcdrug,dtpharmacydate,dtpharmacynum,dtpharmacypatten;
     private Spinner sp_vcparceldesc,sp_vcparcelno;
 
-    private Button btn_update;
+    private Button btn_update,btn_time;
     private ZDataTask mDataTask;
     private SweetAlertDialog pDialog;
     private MyApplication application;
     private Diseased diseased;
+    private int year,month,day;
 
     //下拉框
     //地块名称
@@ -52,12 +58,13 @@ public class Update_DiseasedListActivity extends BaseActivity {
 
         sp_vcparceldesc = (Spinner) findViewById(R.id.sp_vcparceldesc);
         et_vcdrug = (EditText) findViewById(R.id.et_vcdrug);
-        et_dtpharmacydate = (EditText) findViewById(R.id.et_dtpharmacydate);
+        btn_time = (Button) findViewById(R.id.btn_time);
         et_dtpharmacynum = (EditText) findViewById(R.id.et_dtpharmacynum);
         et_dtpharmacypatten = (EditText) findViewById(R.id.et_dtpharmacypatten);
 
         btn_update = (Button) findViewById(R.id.btn_update);
         btn_update.setOnClickListener(this);
+        btn_time.setOnClickListener(this);
         initData();
     }
 
@@ -66,8 +73,16 @@ public class Update_DiseasedListActivity extends BaseActivity {
         mDataTask = MyApplication.getInstance().getZDataTask();
         diseased = (Diseased) getIntent().getSerializableExtra(Constants.VCRECNO);
 
+        //初始化Calendar日历对象
+        Calendar mycalendar = Calendar.getInstance(Locale.CHINA);
+        Date date = new Date();//获取当前日期Date对象
+        mycalendar.setTime(date);////为Calendar对象设置时间为当前日期
+
+        year=mycalendar.get(Calendar.YEAR); //获取Calendar对象中的年
+        month=mycalendar.get(Calendar.MONTH);//获取Calendar对象中的月
+        day=mycalendar.get(Calendar.DAY_OF_MONTH);//获取这个月的第几天
+
         et_vcdrug.setText(diseased.getVcdrug());
-        et_dtpharmacydate.setText(diseased.getDtpharmacydate());
         et_dtpharmacynum.setText(diseased.getDtpharmacynum());
         et_dtpharmacypatten.setText(diseased.getDtpharmacypatten());
         //获取下拉sp生产区编号
@@ -133,7 +148,6 @@ public class Update_DiseasedListActivity extends BaseActivity {
 
                 vcparceldesc = sp_vcparceldesc.getSelectedItem().toString();
                 vcdrug = et_vcdrug.getText().toString().trim();
-                dtpharmacydate = et_dtpharmacydate.getText().toString().trim();
                 dtpharmacynum = et_dtpharmacynum.getText().toString().trim();
                 dtpharmacypatten = et_dtpharmacypatten.getText().toString().trim();
 
@@ -157,6 +171,17 @@ public class Update_DiseasedListActivity extends BaseActivity {
                 Log.d("Update",ss);
 
                 mDataTask.get(String.format(Constants.UPDATE_URL_09,diseased.getVcrecno(),vcparceldesc,vcdrug,dtpharmacydate,dtpharmacynum,dtpharmacypatten),null,null,this);
+                break;
+            case R.id.btn_time:
+                DatePickerDialog dpd=new DatePickerDialog(Update_DiseasedListActivity.this, new DatePickerDialog.OnDateSetListener() {
+                    @Override
+                    public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+                        dtpharmacydate = year+"-"+(month+1)+"-"+dayOfMonth;
+                        btn_time.setText(dtpharmacydate);
+                    }
+                }, year, month, day);
+                dpd.show();
+                break;
         }
     }
 

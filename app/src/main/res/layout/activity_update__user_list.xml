@@ -87,12 +87,12 @@
                 android:text="生日:"
                 android:textSize="18sp"/>
             <!--生日-->
-            <EditText
+            <Button
                 android:layout_weight="1"
                 android:background="@drawable/common_shape_edit"
                 android:layout_width="match_parent"
                 android:layout_height="35dp"
-                android:id="@+id/et_birthday" />
+                android:id="@+id/btn_birthday" />
         </LinearLayout>
         <LinearLayout
             android:padding="15dp"

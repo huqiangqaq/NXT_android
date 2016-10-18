@@ -43,7 +43,7 @@ import java.util.TimerTask;
  * Created by xpeng on 2016/9/17.
  */
 
-public class PlotListActivity extends BaseActivity implements AdapterView.OnItemClickListener{
+public class PlotListActivity extends BaseActivity{
     private static final String TAG = "ParcelListActivity";
     private SwipeRefreshLayout swipeRefreshLayout;
     private ListView mlistview;
@@ -88,7 +88,6 @@ public class PlotListActivity extends BaseActivity implements AdapterView.OnItem
 
             }
         });
-        mlistview.setOnItemClickListener(this);
         mlistview.setOnScrollListener(new AbsListView.OnScrollListener() {
             //AbsListView view 这个view对象就是listview
             @Override
@@ -278,10 +277,4 @@ public class PlotListActivity extends BaseActivity implements AdapterView.OnItem
         return str;
     }
 
-    @Override
-    public void onItemClick(AdapterView<?> view, View view1, int i, long l) {
-        Plot mBuypage=buyPageList.get(i);
-        Log.e(TAG,i+"");
-        startActivity(new Intent(this, PlotDetailActivity.class).putExtra(Constants.VCRECNO,mBuypage));
-    }
 }

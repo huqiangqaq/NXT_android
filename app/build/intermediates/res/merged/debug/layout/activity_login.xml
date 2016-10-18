@@ -11,7 +11,7 @@
         android:paddingRight="32dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:src="@mipmap/login_img"
+        android:src="@mipmap/login_img_jjj"
         android:id="@+id/imageView" />
 
     <EditText

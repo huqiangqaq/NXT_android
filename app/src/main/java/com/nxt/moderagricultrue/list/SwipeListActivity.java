@@ -308,4 +308,10 @@ public class SwipeListActivity extends BaseActivity{
         ZToastUtils.hideToast();
         super.onBackPressed();
     }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        refresh();
+    }
 }

@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.RelativeLayout;
 
+import com.nxt.moderagricultrue.Utils.UpdateManager;
 import com.nxt.moderagricultrue.domain.LoginReturn;
 import com.nxt.moderagricultrue.fragment.Fragment_One;
 import com.nxt.moderagricultrue.fragment.Fragment_two;
@@ -22,6 +23,8 @@ public class Main2Activity extends BaseActivity{
     @Override
     protected void initView() throws UnsupportedEncodingException {
         application = MyApplication.getInstance();
+        //检测版本更新
+        new UpdateManager(this).checkUpdate();
         fragment_one = new Fragment_One();
         fragment_two = new Fragment_two();
         rl_content = (RelativeLayout) findViewById(R.id.rl_content);

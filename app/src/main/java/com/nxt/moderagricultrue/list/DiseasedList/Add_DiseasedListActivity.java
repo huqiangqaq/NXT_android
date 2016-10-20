@@ -2,8 +2,6 @@ package com.nxt.moderagricultrue.list.DiseasedList;
 
 import android.app.DatePickerDialog;
 import android.graphics.Color;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
@@ -20,7 +18,6 @@ import com.nxt.moderagricultrue.ComUtils;
 import com.nxt.moderagricultrue.Constants;
 import com.nxt.moderagricultrue.MyApplication;
 import com.nxt.moderagricultrue.R;
-import com.nxt.moderagricultrue.list.AddActivity;
 import com.nxt.zyl.data.ZDataTask;
 import com.nxt.zyl.util.JsonUtil;
 import com.zhy.http.okhttp.OkHttpUtils;
@@ -167,10 +164,8 @@ public class Add_DiseasedListActivity extends BaseActivity {
                 pDialog.setCancelable(false);
                 pDialog.show();
 
-
                 String ss = String.format(Constants.ADD_URL_09,vcoperatrueser,application.getOrgID(),vcparcelno,vcparceldesc,vcdrug,dtpharmacydate,dtpharmacynum,dtpharmacypatten);
                 Log.d("Update",ss);
-
                 mDataTask.get(String.format(Constants.ADD_URL_09,vcoperatrueser,application.getOrgID(),vcparcelno,vcparceldesc,vcdrug,dtpharmacydate,dtpharmacynum,dtpharmacypatten),null,null,this);
                 break;
             case R.id.btn_time:
@@ -182,6 +177,7 @@ public class Add_DiseasedListActivity extends BaseActivity {
                     }
                 }, year, month, day);
                 dpd.show();
+                break;
         }
     }
 

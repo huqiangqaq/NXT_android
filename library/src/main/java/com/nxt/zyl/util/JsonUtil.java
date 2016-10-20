@@ -48,4 +48,14 @@ public class JsonUtil {
         }
         return null;
     }
+
+    public static String parsejson_VersionCode(String json){
+        try {
+            JSONObject jsonObject = new JSONObject(json);
+            return jsonObject.getString("appmsg");
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
 }

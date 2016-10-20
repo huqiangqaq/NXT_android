@@ -30,7 +30,7 @@
         android:name=".MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name_lp"
+        android:label="@string/app_name_jjj"
         android:supportsRtl="true"
         android:theme="@android:style/Theme.Black.NoTitleBar"
         tools:replace="android:icon,android:theme,android:label">

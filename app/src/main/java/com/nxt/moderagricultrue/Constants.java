@@ -17,7 +17,7 @@ public class Constants {
     public static final String BASE_URL_JJJ = "http://zs.yxag.gov.cn/jjj";
 
     public static final String TEST_URL = "http://192.168.10.8:8081/lp";
-    public static final String BASE_URL="http://zs.yxag.gov.cn:8081/lp";//BASE
+    public static final String BASE_URL="http://zs.yxag.gov.cn:8081/jjj";//BASE
     public static final String LOGIN_URL=BASE_URL+"/doLoginApp.jhtml?account_=%s&password_=%s";
     public static final String URL_01=BASE_URL+"/datum/buy/listBuyPage.jhtml?limit=%s&start=1&page=%s";//购进
     public static final String URL_02=BASE_URL+"/datum/out/listOutPage.jhtml?limit=%s&start=1&page=%s";
@@ -131,6 +131,15 @@ public class Constants {
     /**
      * 检测版本更新
      */
-    public static final String JX12316_VERSION_URL = "http://182.116.57.248:88/apk/jx12316_version.txt";
-    public static final String JX12316_APKURL = "http://182.116.57.248:88/apk/jx12316.apk";
+    //乐平
+    public static final String VERSION_URL_lp = "http://zs.yxag.gov.cn:8081/lp/app/version/loadVersion.jhtml";
+    public static final String APKURL_lp = "http://zs.yxag.gov.cn:8081/lp/newversion/app-release_lp.apk";
+
+    //青原区qyq
+    public static final String VERSION_URL_qyq = "http://zs.yxag.gov.cn:8081/qyq/app/version/loadVersion.jhtml";
+    public static final String APKURL_qyq = "http://zs.yxag.gov.cn:8081/qyq/newversion/app-release_qyq.apk";
+
+    //京津冀
+    public static final String VERSION_URL_jjj = "http://zs.yxag.gov.cn:8081/jjj/app/version/loadVersion.jhtml";
+    public static final String APKURL_jjj = "http://zs.yxag.gov.cn:8081/jjj/newversion/app-release_jjj.apk";
 }

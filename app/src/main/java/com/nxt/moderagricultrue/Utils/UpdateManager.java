@@ -14,6 +14,7 @@ import android.widget.Toast;
 import com.nxt.moderagricultrue.Constants;
 import com.nxt.zyl.util.CommonUtils;
 import com.nxt.zyl.util.HttpUtils;
+import com.nxt.zyl.util.JsonUtil;
 
 
 public class UpdateManager {
@@ -28,7 +29,7 @@ public class UpdateManager {
         isnet = CommonUtils.isNetWorkConnected(mcontext);
         if (isnet) {
             VersionTask versionTask = new VersionTask(mcontext);
-            versionTask.execute(Constants.JX12316_VERSION_URL);
+            versionTask.execute(Constants.VERSION_URL_jjj);
         } else {
             Toast.makeText(mcontext,"网络错误", Toast.LENGTH_SHORT).show();
         }
@@ -74,9 +75,9 @@ public class UpdateManager {
                 curVersion = mcontext.getPackageManager().getPackageInfo(
                         mcontext.getPackageName(), 0).versionCode;
                 String v = HttpUtils.getOriginalJSON(params[0]);
-                if (v != null && !v.equals("")) {
-                    newVersion = Integer.valueOf(HttpUtils
-                            .getOriginalJSON(params[0]));
+                String v1 = JsonUtil.parsejson_VersionCode(v);
+                if (v1 != null && !v1.equals("")) {
+                    newVersion = Integer.valueOf(v1);
                 } else {
                     newVersion = curVersion;
                 }
@@ -85,7 +86,7 @@ public class UpdateManager {
                 // TODO Auto-generated catch block
                 e.printStackTrace();
             }
-            return newVersion > curVersion;
+            return newVersion>curVersion;
         }
     }
 
@@ -96,7 +97,7 @@ public class UpdateManager {
                 .setMessage("发现程序有更新的版本")
                 .setPositiveButton("升级", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int whichButton) {
-                        Uri uri = Uri.parse(Constants.JX12316_APKURL);
+                        Uri uri = Uri.parse(Constants.APKURL_jjj);
                         Intent web = new Intent(Intent.ACTION_VIEW, uri);
                         mcontext.startActivity(web);
                     }
